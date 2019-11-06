@@ -26,7 +26,7 @@
     </bean>
 
     <!-- 静态资源映射 -->
-    <mvc:resources mapping="/static/**" location="/static/" cache-period="31536000"/>
+<!--    <mvc:resources mapping="/static/**" location="/static/" cache-period="31536000"/>-->
 
     <!--拦截器配置
         各拦截器重下往上执行-->
@@ -40,7 +40,7 @@
 
 <!--        <mvc:interceptor>-->
 <!--            <mvc:mapping path="/**"/>-->
-<!--            <bean class="com.windsoft.my.shop.web.admin.web.interceptor.PermissionInterceptor"/>-->
+<!--            <bean class="com.windsoft.lt.grade.web.admin.web.interceptor.PermissionInterceptor"/>-->
 <!--        </mvc:interceptor>-->
 <!--    </mvc:interceptors>-->
 </beans>
