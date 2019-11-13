@@ -25,8 +25,8 @@
         <property name="suffix" value="${web.view.suffix}"/>
     </bean>
 
-    <!-- 静态资源映射 -->
-<!--    <mvc:resources mapping="/static/**" location="/static/" cache-period="31536000"/>-->
+    <!--静态资源映射-->
+    <mvc:resources mapping="/static/**" location="/static/" cache-period="31536000"/>
 
     <!--拦截器配置
         各拦截器重下往上执行-->

@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Ricost
-  Date: 2019/11/6
-  Time: 9:59
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
@@ -19,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700" rel="stylesheet">
 
     <!-- Custom Styles -->
-    <link rel="stylesheet" type="text/css" href="/static/assets/css/loginstyle.css">
+    <link rel="stylesheet" href="/static/assets/css/loginstyle.css">
 
     <title>Login</title>
 </head>
@@ -58,7 +51,7 @@
                             <input type="checkbox">
                             <span class="slider round"></span>
                         </label>
-                        <label class="form-check-label">Remember me</label>
+                        <label class="form-check-label" for="exampleCheck1">Remember me</label>
 
                         <label class="forgot-password"><a href="#">Forgot Password?</a></label>
 
