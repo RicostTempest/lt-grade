@@ -18,8 +18,15 @@
 <script src="/static/assets/js/sb-admin-2.min.js"></script>
 
 <!-- Page level plugins -->
-<script src="/static/assets/vendor/chart.js/Chart.min.js"></script>
+<script src="/static/assets/vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="/static/assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
 <!-- Page level custom scripts -->
-<script src="/static/assets/js/demo/chart-area-demo.js"></script>
-<script src="/static/assets/js/demo/chart-pie-demo.js"></script>
+<script src="/static/assets/js/demo/datatables-demo.js"></script>
+
+<!-- DateTime  -->
+<script src="/static/assets/app/datetime.js"></script>
+
+<!--App-->
+<script src="/static/assets/app/app.js"></script>
+
