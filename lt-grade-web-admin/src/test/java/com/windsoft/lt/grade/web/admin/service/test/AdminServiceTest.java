@@ -26,4 +26,10 @@ public class AdminServiceTest {
         Admin admin = adminService.login("ricost@foxmail.com","123456");
         System.out.println(admin);
     }
+
+    @Test
+    public void testGetId(){
+        Admin admin = adminService.getById(1L);
+        System.out.println(admin);
+    }
 }

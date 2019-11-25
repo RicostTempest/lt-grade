@@ -1,6 +1,10 @@
 package com.windsoft.lt.grade.web.admin.service;
 
 import com.windsoft.lt.grade.domain.Admin;
+import com.windsoft.lt.grade.dto.PageInfo;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @InterfaceName AdminService
@@ -12,4 +16,10 @@ import com.windsoft.lt.grade.domain.Admin;
 
 public interface AdminService {
     Admin login(String email, String password);
+
+    Admin getById(Long id);
+
+    public PageInfo<Admin> page(int start, int length, int draw, Admin admin);
+
+    int count(Admin admin);
 }

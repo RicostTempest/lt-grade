@@ -18,4 +18,35 @@
         WHERE
         dt.email = #{email}
     </select>
+
+    <select id="page" resultType="Admin" parameterType="java.util.Map">
+        SELECT
+        <include refid="adminColumns"/>
+        FROM
+        admin AS dt
+        <where>
+            <if test="pageParams.email != null and pageParams.email !='' ">
+                AND dt.email LIKE CONCAT ('%',#{pageParams.email},'%')
+            </if>
+        </where>
+        LIMIT #{start}, #{length}
+    </select>
+
+    <select id="count" resultType="java.lang.Integer">
+        select count(*) from admin AS dt
+        <where>
+            <if test="email != null and email != ''">
+                AND dt.email LIKE CONCAT ('%',#{email},'%')
+            </if>
+        </where>
+    </select>
+
+    <select id="getById" resultType="Admin">
+        SELECT
+        <include refid="adminColumns"/>
+        FROM
+        admin AS dt
+        WHERE
+        id = #{id}
+    </select>
 </mapper>
