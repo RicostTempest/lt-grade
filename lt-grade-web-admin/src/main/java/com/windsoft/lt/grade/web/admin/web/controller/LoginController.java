@@ -34,7 +34,7 @@ public class LoginController {
     public static final String COOKIE_NAME_ADMIN_INFO = "adminInfo";
 
     @RequestMapping(value = {"","login"}, method = RequestMethod.GET)
-    public String login(HttpServletRequest request){
+    public String login(HttpServletRequest request, HttpServletResponse response){
         String adminInfo = CookieUtils.getCookieValue(request, COOKIE_NAME_ADMIN_INFO);
 
         if (StringUtils.isNotBlank(adminInfo)) {
@@ -45,6 +45,13 @@ public class LoginController {
             request.setAttribute("password",password);
             request.setAttribute("isRemember",true);
 
+//            Admin admin = adminService.login(email,password);
+//
+//            if (admin == null){
+//                return "login";
+//            }else{
+//                return "main";
+//            }
         }
         return "login";
     }
@@ -85,7 +92,8 @@ public class LoginController {
     }
 
     @RequestMapping(value = "logout", method = RequestMethod.GET)
-    public String logout(HttpServletRequest request){
+    public String logout(HttpServletRequest request, HttpServletResponse response){
+
         request.getSession().invalidate();
 
         return "redirect:/login";

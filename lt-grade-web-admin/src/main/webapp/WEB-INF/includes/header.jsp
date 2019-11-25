@@ -13,3 +13,7 @@
 <!-- Custom styles for this template-->
 <link href="/static/assets/css/sb-admin-2.min.css" rel="stylesheet">
 
+
+<link href="/static/assets/css/switch_button.css" rel="stylesheet" type="text/css">
+
+

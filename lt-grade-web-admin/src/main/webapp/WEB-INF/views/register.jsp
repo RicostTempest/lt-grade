@@ -1,71 +1,68 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-    <!-- Loding font -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700" rel="stylesheet">
-
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="/static/assets/css/loginstyle.css">
-
-    <title>Login</title>
+    <jsp:include page="../includes/header.jsp"/>
 </head>
-<body>
 
-<!-- Backgrounds -->
+<body class="bg-gradient-primary">
 
-<div id="login-bg" class="container-fluid">
+<div class="container">
 
-    <div class="bg-img"></div>
-    <div class="bg-color"></div>
-</div>
-
-<!-- End Backgrounds -->
-
-<div class="container" id="login">
-    <div class="row justify-content-center">
-        <div class="col-lg-8">
-            <div class="login">
-
-                <h1>注册</h1>
-
-                <!-- Loging form -->
-                <form>
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+    <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+                <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                <div class="col-lg-7">
+                    <div class="p-5">
+                        <div class="text-center">
+                            <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                        </div>
+                        <form class="user">
+                            <div class="form-group">
+                                <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address">
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
+                                </div>
+                            </div>
+                            <a href="login.html" class="btn btn-primary btn-user btn-block">
+                                Register Account
+                            </a>
+                            <hr>
+                            <a href="index.html" class="btn btn-google btn-user btn-block">
+                                <i class="fab fa-google fa-fw"></i> Register with Google
+                            </a>
+                            <a href="index.html" class="btn btn-facebook btn-user btn-block">
+                                <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
+                            </a>
+                        </form>
+                        <hr>
+                        <div class="text-center">
+                            <a class="small" href="forgot-password.html">Forgot Password?</a>
+                        </div>
+                        <div class="text-center">
+                            <a class="small" href="login.html">Already have an account? Login!</a>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                    </div>
-
-                    <div class="form-check">
-
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
-                        <label class="form-check-label" for="checkbox">绑定学生或教师信息</label>
-                    </div>
-
-                    <br>
-                    <button type="submit" class="btn btn-lg btn-block btn-success">登录</button>
-                </form>
-                <!-- End Loging form -->
-
-            </div>风叶班级管理系统
+                </div>
+            </div>
         </div>
     </div>
-</div>
 
+</div>
+<label class="button-switch">
+    <input type="checkbox">
+    <span class="button-slider round"></span>
+</label>
+<jsp:include page="../includes/footer.jsp"/>
 
 </body>
+
 </html>
