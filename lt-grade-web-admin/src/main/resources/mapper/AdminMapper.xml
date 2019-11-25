@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.windsoft.lt.grade.web.admin.dao.AdminDao">
+    <sql id="adminColumns">
+          dt.id,
+          dt.email,
+          dt.password,
+          dt.status,
+          dt.created,
+          dt.updated
+    </sql>
+
+    <select id="getByEmail" resultType="Admin">
+        SELECT
+        <include refid="adminColumns"/>
+        FROM
+        admin AS dt
+        WHERE
+        dt.email = #{email}
+    </select>
+</mapper>
