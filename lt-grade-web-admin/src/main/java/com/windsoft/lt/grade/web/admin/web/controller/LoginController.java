@@ -98,4 +98,8 @@ public class LoginController {
 
         return "redirect:/login";
     }
+
+    public String changeStatus(Admin admin){
+        return "";
+    }
 }

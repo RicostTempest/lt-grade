@@ -49,4 +49,16 @@
         WHERE
         id = #{id}
     </select>
+
+    <update id="update">
+        UPDATE
+            admin
+        SET
+            email = #{email},
+            password = #{password},
+            status = #{status},
+            created = #{created},
+            updated = #{updated}
+        WHERE id = #{id}
+    </update>
 </mapper>

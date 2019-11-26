@@ -14,10 +14,10 @@
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <div class="modal-body">${message == null ? "内容提示" : message}</div>
+            <div class="modal-body" id="modalMessage">${message == null ? "内容提示" : message}</div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="login.html">${ok == null ? "确定" : ok}</a>
+                <a class="btn btn-primary" href="#" id="checkOk">${ok == null ? "确定" : ok}</a>
             </div>
         </div>
     </div>

@@ -47,9 +47,9 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Email</th>
-                                    <th>Status</th>
                                     <th>Created</th>
                                     <th>Updated</th>
+                                    <th>Status</th>
                                     <th>Operation</th>
                                 </tr>
                                 </thead>
@@ -57,9 +57,9 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Email</th>
-                                    <th>Status</th>
                                     <th>Created</th>
                                     <th>Updated</th>
+                                    <th>Status</th>
                                     <th>Operation</th>
                                 </tr>
                                 </tfoot>
@@ -92,7 +92,7 @@
 
 <jsp:include page="../includes/footer.jsp"/>
 
-<tags:modal message='Select "Logout" below if you are ready to end your current session.' title="Ready to Leave?" ok="Logout"/>
+<tags:modal />
 <script>
     // var _dataTable;
     // $(function () {
@@ -129,22 +129,31 @@
            "columns":[
                {"data":"id"},
                {"data":"email"},
-               {"data":"status"},
                {"data":function (row,type,val,meta) {
                        return DateTime.format(row.created, 'yyyy-MM-dd HH:mm');
                    }},
                {"data":function (row,type,val,meta) {
                        return DateTime.format(row.updated, 'yyyy-MM-dd HH:mm');
                    }},
+               {"data":function (row, type, val, meta) {
+                       var checked = "";
+                       if(row.status){
+                           checked = "checked"
+                       }
+                       return " <label class=\"button-switch\">\n" +
+                           "        <input type='checkbox' " + checked + " >\n" +
+                           "        <span class=\"button-slider round\"></span>\n" +
+                           "    </label>"
+                   }},
                {"data":function (row,type,val,meta) {
                        var detailUrl = "/admin/detail?id=" + row.id;
-                       return " <a href=\""+detailUrl+"\" class=\"btn btn-info btn-circle btn-sm\">\n" +
+                       return " <a href='#' class='btn btn-info btn-circle btn-sm' onclick='detail()'>\n" +
                            "        <i class=\"fas fa-info-circle\"></i>\n" +
                            "    </a>\n" +
-                           "    <a href=\"#\" class=\"btn btn-warning btn-circle btn-sm\">\n" +
+                           "    <a href='#' class=\"btn btn-warning btn-circle btn-sm\">\n" +
                            "        <i class=\"fa fa-edit\"></i>\n" +
                            "    </a>\n" +
-                           "    <a href=\"#\" class=\"btn btn-danger btn-circle btn-sm\">\n" +
+                           "    <a href='#' class=\"btn btn-danger btn-circle btn-sm\">\n" +
                            "        <i class=\"fas fa-trash\"></i>\n" +
                            "    </a>"
                    }},
@@ -158,8 +167,13 @@
             type:"get",
             dataType:"html",
             success:function (data) {
-                $("#modal-body").html(data);
+                console.log(data);
+                console.log()
+                $("#modalMessage").html(data);
                 $("#modalDefault").modal("show");
+                $("#checkOk").bind("click",function () {
+                    $("#modalDefault").modal("hide");
+                });
             }
         });
     }
