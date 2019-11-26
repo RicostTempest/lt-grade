@@ -1,11 +1,12 @@
 package com.windsoft.lt.grade.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.windsoft.lt.grade.persistence.BaseEntity;
-import com.windsoft.lt.grade.utils.RegexpUtils;
+import com.windsoft.lt.grade.commons.persistence.BaseEntity;
+
+
+import com.windsoft.lt.grade.commons.utils.RegexpUtils;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.Pattern;
 
@@ -19,6 +20,7 @@ import javax.validation.constraints.Pattern;
 @Data
 @EqualsAndHashCode(callSuper=false)
 public class Admin extends BaseEntity {
+    @Pattern(regexp = RegexpUtils.EMAIL, message = "邮箱格式不正确")
     private String email;
     @JsonIgnore
     private String password;

@@ -1,6 +1,6 @@
 package com.windsoft.lt.grade.web.admin.web.interceptor;
 
-import com.windsoft.lt.grade.constant.ConstantUtils;
+import com.windsoft.lt.grade.commons.constant.ConstantUtils;
 import com.windsoft.lt.grade.domain.Admin;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;

@@ -1,4 +1,4 @@
-package com.windsoft.lt.grade.constant;
+package com.windsoft.lt.grade.commons.constant;
 
 /**
  * 常量工具类

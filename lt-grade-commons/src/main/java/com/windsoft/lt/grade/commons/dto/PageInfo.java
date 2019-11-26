@@ -1,6 +1,6 @@
-package com.windsoft.lt.grade.dto;
+package com.windsoft.lt.grade.commons.dto;
 
-import com.windsoft.lt.grade.persistence.BaseEntity;
+import com.windsoft.lt.grade.commons.persistence.BaseEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

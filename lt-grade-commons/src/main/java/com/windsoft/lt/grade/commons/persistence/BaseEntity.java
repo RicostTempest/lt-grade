@@ -1,4 +1,4 @@
-package com.windsoft.lt.grade.persistence;
+package com.windsoft.lt.grade.commons.persistence;
 
 import java.io.Serializable;
 import java.util.Date;

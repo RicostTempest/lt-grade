@@ -30,4 +30,8 @@ public interface AdminDao {
      * @return
      */
     int count(Admin admin);
+
+    void insert(Admin admin);
+
+    void update(Admin admin);
 }

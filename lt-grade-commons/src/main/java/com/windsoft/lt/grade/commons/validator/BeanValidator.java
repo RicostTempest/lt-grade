@@ -1,4 +1,4 @@
-package com.windsoft.lt.grade.validator;
+package com.windsoft.lt.grade.commons.validator;
 
 /**
  * @ClassName BeanValidator

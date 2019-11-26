@@ -3,9 +3,8 @@
 <html lang="en">
 
 <head>
-
+    <title>Welcome Back!</title>
     <jsp:include page="../includes/header.jsp"/>
-
 </head>
 
 <body class="bg-gradient-primary">

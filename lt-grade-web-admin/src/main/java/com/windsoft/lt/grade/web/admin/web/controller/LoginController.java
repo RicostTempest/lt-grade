@@ -1,8 +1,8 @@
 package com.windsoft.lt.grade.web.admin.web.controller;
 
-import com.windsoft.lt.grade.constant.ConstantUtils;
+import com.windsoft.lt.grade.commons.constant.ConstantUtils;
 import com.windsoft.lt.grade.domain.Admin;
-import com.windsoft.lt.grade.utils.CookieUtils;
+import com.windsoft.lt.grade.commons.utils.CookieUtils;
 import com.windsoft.lt.grade.web.admin.service.AdminService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,10 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.net.http.HttpResponse;
 
 /**
  * @ClassName LoginController

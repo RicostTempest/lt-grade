@@ -1,13 +1,16 @@
 package com.windsoft.lt.grade.web.admin.service.impl;
 
 import com.windsoft.lt.grade.domain.Admin;
-import com.windsoft.lt.grade.dto.PageInfo;
+import com.windsoft.lt.grade.commons.dto.BaseResult;
+import com.windsoft.lt.grade.commons.dto.PageInfo;
+import com.windsoft.lt.grade.commons.validator.BeanValidator;
 import com.windsoft.lt.grade.web.admin.dao.AdminDao;
 import com.windsoft.lt.grade.web.admin.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -64,5 +67,28 @@ public class AdminServiceImpl implements AdminService {
 
     public int count(Admin admin) {
         return adminDao.count(admin);
+    }
+
+    @Override
+    public BaseResult save(Admin admin) {
+        String validator = BeanValidator.validator(admin);
+        //验证失败，返回提示信息
+        if (validator != null){
+            return BaseResult.fail(validator);
+        }
+        //验证成功
+        else{
+            admin.setUpdated(new Date());
+            if (admin.getId() == null){
+                admin.setCreated(new Date());
+                admin.setPassword(DigestUtils.md5DigestAsHex("123456".getBytes()));
+                adminDao.insert(admin);
+            }
+            //更新用户信息
+            else{
+                adminDao.update(admin);
+            }
+        }
+        return BaseResult.success("信息修改成功");
     }
 }

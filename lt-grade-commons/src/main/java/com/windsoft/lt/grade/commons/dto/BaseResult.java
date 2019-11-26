@@ -1,4 +1,4 @@
-package com.windsoft.lt.grade.dto;
+package com.windsoft.lt.grade.commons.dto;
 
 import java.io.Serializable;
 

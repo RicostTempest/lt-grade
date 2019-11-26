@@ -61,4 +61,22 @@
             updated = #{updated}
         WHERE id = #{id}
     </update>
+
+    <insert id="insert">
+        INSERT INTO admin (
+         `email`,
+         `password`,
+         `status`,
+         `created`,
+         `updated`
+         )
+         VALUES (
+         #{email},
+         #{password},
+         #{status},
+         #{created},
+         #{updated}
+         )
+    </insert>
+
 </mapper>

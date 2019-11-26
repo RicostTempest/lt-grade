@@ -32,7 +32,7 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Admin Controller:</h6>
                 <a class="collapse-item" href="/admin/list">管理员列表</a>
-                <a class="collapse-item" href="cards.html">添加管理员</a>
+                <a class="collapse-item" href="/admin/form">添加管理员</a>
             </div>
         </div>
     </li>

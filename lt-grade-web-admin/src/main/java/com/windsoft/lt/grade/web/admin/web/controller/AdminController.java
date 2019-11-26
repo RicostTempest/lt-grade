@@ -1,13 +1,16 @@
 package com.windsoft.lt.grade.web.admin.web.controller;
 
 import com.windsoft.lt.grade.domain.Admin;
-import com.windsoft.lt.grade.dto.PageInfo;
+import com.windsoft.lt.grade.commons.dto.PageInfo;
 import com.windsoft.lt.grade.web.admin.service.AdminService;
+import com.windsoft.lt.grade.commons.dto.BaseResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
@@ -42,6 +45,11 @@ public class AdminController {
         return "admin_list";
     }
 
+    @RequestMapping(value = "form", method = RequestMethod.GET)
+    public String form(){
+        return "admin_form";
+    }
+
 
     @ResponseBody
     @RequestMapping(value = "page", method = RequestMethod.GET)
@@ -64,5 +72,20 @@ public class AdminController {
     @RequestMapping(value = "detail", method = RequestMethod.GET)
     public String detail(){
         return "admin_detail";
+    }
+
+    @RequestMapping(value = "save", method = RequestMethod.POST)
+    public String save(Admin admin, RedirectAttributes redirectAttributes, Model model){
+        BaseResult baseResult = adminService.save(admin);
+        //保存成功
+        if(baseResult.getStatus() == BaseResult.STATUS_SUCCESS){
+            redirectAttributes.addFlashAttribute("baseResult", baseResult);
+            return "redirect:/admin/list";
+        }
+        //保存失败
+        else{
+            model.addAttribute("baseResult", baseResult);
+            return "admin_form";
+        }
     }
 }
