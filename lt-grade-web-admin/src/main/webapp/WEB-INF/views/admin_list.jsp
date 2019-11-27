@@ -122,6 +122,7 @@
            "searching":false,
            "serverSide":true,
            "deferRender":true,
+           "pageLength": 6,
            "ajax":{
                "url":"/admin/page"
            },
@@ -136,20 +137,22 @@
                    }},
                {"data":function (row, type, val, meta) {
                        var checked = "";
+                       var activityUrl = "/admin/activity?id=" + row.id;
                        if(row.activity){
                            checked = "checked"
                        }
                        return " <label class=\"button-switch\">\n" +
-                           "        <input onclick=\"activity("+row.id+")\" type='checkbox' " + checked + " >\n" +
+                           '        <input onclick="activity(\'' + activityUrl + '\')" type="checkbox"  '+ checked +'  >\n' +
                            "        <span class=\"button-slider round\"></span>\n" +
                            "    </label>"
                    }},
                {"data":function (row,type,val,meta) {
                        var detailUrl = "/admin/detail?id=" + row.id;
-                       return " <a href='#' class='btn btn-info btn-circle btn-sm' onclick='detail()'>\n" +
+                       var editlUrl = "/admin/form?id=" + row.id;
+                       return '<a href="#" class="btn btn-info btn-circle btn-sm" onclick="detail(\'' + detailUrl + '\')">\n' +
                            "        <i class=\"fas fa-info-circle\"></i>\n" +
                            "    </a>\n" +
-                           "    <a href='#' class=\"btn btn-warning btn-circle btn-sm\">\n" +
+                           "    <a href=\""+editlUrl+"\" class=\"btn btn-warning btn-circle btn-sm\">\n" +
                            "        <i class=\"fa fa-edit\"></i>\n" +
                            "    </a>\n" +
                            "    <a href='#' class=\"btn btn-danger btn-circle btn-sm\">\n" +
@@ -185,9 +188,9 @@
        }) ;
     });
 
-    function detail() {
+    function detail(url) {
         $.ajax({
-            url:"/admin/detail?id=1",
+            url:url,
             type:"get",
             dataType:"html",
             success:function (data) {
@@ -200,9 +203,9 @@
         });
     }
 
-    function activity(id) {
+    function activity(url) {
         $.ajax({
-            url:"/admin/activity?id=" + id,
+            url:url,
             type:"get",
             dataType:"json",
             success:function (data) {
