@@ -26,7 +26,7 @@ public class PermissionInterceptor implements HandlerInterceptor {
     @Override
     public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) throws Exception {
 
-        Admin admin = (Admin) httpServletRequest.getSession().getAttribute(ConstantUtils.SESSION_ADMIN);
+        Admin admin = (Admin) httpServletRequest.getSession().getAttribute(ConstantUtils.SESSION_USER);
         if(admin != null){
             if(modelAndView != null && modelAndView.getViewName() != null){
                 if (modelAndView.getViewName().endsWith("login") || modelAndView.getViewName().endsWith("register")){

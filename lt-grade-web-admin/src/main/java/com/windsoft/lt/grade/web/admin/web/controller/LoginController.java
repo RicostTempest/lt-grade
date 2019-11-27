@@ -1,6 +1,7 @@
 package com.windsoft.lt.grade.web.admin.web.controller;
 
 import com.windsoft.lt.grade.commons.constant.ConstantUtils;
+import com.windsoft.lt.grade.commons.dto.BaseResult;
 import com.windsoft.lt.grade.domain.Admin;
 import com.windsoft.lt.grade.commons.utils.CookieUtils;
 import com.windsoft.lt.grade.web.admin.service.AdminService;
@@ -67,10 +68,10 @@ public class LoginController {
             CookieUtils.deleteCookie(request,response,COOKIE_NAME_ADMIN_INFO);
         }
 
-        Admin admin = adminService.login(email,password);
+        BaseResult baseResult = adminService.login(email,password);
 
-        if (admin == null){
-            model.addAttribute("message","用户名或密码错误，请重新输入");
+        if (baseResult.getData() == null){
+            model.addAttribute("message",baseResult.getMessage());
             return "login";
         }
         //登录成功
@@ -84,7 +85,7 @@ public class LoginController {
             }
 
             //将登陆信息放入会话
-            request.getSession().setAttribute(ConstantUtils.SESSION_ADMIN, admin);
+            request.getSession().setAttribute(ConstantUtils.SESSION_USER, baseResult.getData());
             return "redirect:/main";
         }
     }

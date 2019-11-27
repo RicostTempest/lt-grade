@@ -34,4 +34,6 @@ public interface AdminDao {
     void insert(Admin admin);
 
     void update(Admin admin);
+
+    void delete(Admin admin);
 }

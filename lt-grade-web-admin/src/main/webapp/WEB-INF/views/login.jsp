@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="tags" tagdir="/WEB-INF/tags" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +21,15 @@
                 <div class="card-body p-0">
                     <!-- Nested Row within Card Body -->
                     <div class="row">
-                        <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                        <div class="col-lg-6 d-none d-lg-block bg-login-image ">
+                            <div class="justify-content-center align-self-center text-center">
+                                <div class="alert alert-danger alert-dismissible" ${message == null ? "style='display:none'" : ""}>
+                                    <button type="button" class="close float-left" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                    <h1 class="h4 text-gray-900 mb-4" >${message}</h1>
+                                </div>
+                            </div>
+
+                        </div>
                         <div class="col-lg-6">
                             <div class="p-5">
                                 <div class="text-center">
@@ -68,7 +77,7 @@
     </div>
 
 </div>
-
+<tags:modal />
 <!-- Bootstrap core JavaScript-->
 <script src="/static/assets/vendor/jquery/jquery.min.js"></script>
 <script src="/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

@@ -1,5 +1,6 @@
 package com.windsoft.lt.grade.web.admin.web.controller;
 
+import com.windsoft.lt.grade.commons.constant.ConstantUtils;
 import com.windsoft.lt.grade.domain.Admin;
 import com.windsoft.lt.grade.commons.dto.PageInfo;
 import com.windsoft.lt.grade.web.admin.service.AdminService;
@@ -7,6 +8,7 @@ import com.windsoft.lt.grade.commons.dto.BaseResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -30,13 +32,14 @@ public class AdminController {
     @Autowired
     private AdminService adminService;
 
-    public Admin getAdmin(Long id){
+    @ModelAttribute
+    public Admin getTbUser(Long id){
         Admin admin = null;
-        if(id == null){
-            adminService.getById(id);
-        }else{
-            admin = new Admin();
+        if(id != null){
+            admin = adminService.getById(id);
         }
+        else
+            admin = new Admin();
         return admin;
     }
 
@@ -63,8 +66,9 @@ public class AdminController {
         int draw = strDraw == null ? 0 :Integer.parseInt(strDraw);
         int start = strStart == null ? 0 :Integer.parseInt(strStart);
         int length = strLength == null ? 10 :Integer.parseInt(strLength);
+        Admin user = (Admin) request.getSession().getAttribute(ConstantUtils.SESSION_USER);
 
-        PageInfo<Admin> pageInfo = adminService.page(start, length, draw, admin);
+        PageInfo<Admin> pageInfo = adminService.page(start, length, draw, admin,user);
 
         return pageInfo;
     }
@@ -93,6 +97,14 @@ public class AdminController {
     @RequestMapping(value = "activity",method = RequestMethod.GET)
     public BaseResult orActivity(Long id){
         BaseResult baseResult = adminService.orActivity(adminService.getById(id));
+
+        return baseResult;
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "delete", method = RequestMethod.GET)
+    public BaseResult delete(Admin admin){
+        BaseResult baseResult = adminService.delete(admin);
 
         return baseResult;
     }

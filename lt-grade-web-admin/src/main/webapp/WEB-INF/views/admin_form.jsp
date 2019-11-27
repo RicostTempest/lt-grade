@@ -34,15 +34,18 @@
             <div class="container">
                 <div class="row justify-content-center align-self-center" >
                     <div class="align-self-center col-lg-8" >
-                        <form class="shadow mb-4 align-items-center" action="/admin/save" method="post" >
+<%--                        <form class="shadow mb-4 align-items-center" action="/admin/save" method="post" >--%>
+                        <form:form cssClass="shadow mb-4 align-items-center" action="/admin/save" method="post" modelAttribute="admin">
                             <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">用户管理</h6>
+                                <h6 class="m-0 font-weight-bold text-primary">${admin.id == null ? "新增" : "编辑"}管理员</h6>
                             </div>
                             <div class="card-body">
+                                <form:hidden path="id"/>
                                 <div class="form-group row">
                                     <label for="email" class="col-sm-2 col-form-label">Email</label>
                                     <div class="col-sm-10">
-                                        <input type="email" class="form-control" id="email" name="email">
+<%--                                        <input type="email" class="form-control" id="email" name="email">--%>
+                                        <form:input path="email" cssClass="form-control required" placeholder="Email"/>
                                     </div>
                                 </div>
                             </div>
@@ -51,7 +54,8 @@
                                 <button type="button" class="btn btn-default" onclick="history.go(-1)">返回</button>
                                 <button type="submit" class="btn btn-primary float-right">保存</button>
                             </div>
-                        </form>
+                        </form:form>
+<%--                        </form>--%>
                         <div class="alert alert-${baseResult.status == 200 ? "success":"danger"} alert-dismissible" ${baseResult == null ? "style='display:none'" : ""}>
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                             ${baseResult.message}

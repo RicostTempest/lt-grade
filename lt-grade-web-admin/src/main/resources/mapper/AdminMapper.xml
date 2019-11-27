@@ -28,6 +28,9 @@
             <if test="pageParams.email != null and pageParams.email !='' ">
                 AND dt.email LIKE CONCAT ('%',#{pageParams.email},'%')
             </if>
+            <if test="user.id != null and user.id !='' ">
+                AND dt.id != #{user.id}
+            </if>
         </where>
         LIMIT #{start}, #{length}
     </select>
@@ -78,5 +81,9 @@
          #{updated}
          )
     </insert>
+
+    <delete id="delete">
+        DELETE FROM admin WHERE id = #{id}
+    </delete>
 
 </mapper>

@@ -13,15 +13,17 @@ import com.windsoft.lt.grade.commons.dto.BaseResult;
  **/
 
 public interface AdminService {
-    Admin login(String email, String password);
+    BaseResult login(String email, String password);
 
     Admin getById(Long id);
 
-    public PageInfo<Admin> page(int start, int length, int draw, Admin admin);
+    public PageInfo<Admin> page(int start, int length, int draw, Admin admin, Admin user);
 
     int count(Admin admin);
 
     BaseResult save(Admin admin);
 
     BaseResult orActivity(Admin admin);
+
+    BaseResult delete(Admin admin);
 }

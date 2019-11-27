@@ -1,5 +1,6 @@
 package com.windsoft.lt.grade.web.admin.service.test;
 
+import com.windsoft.lt.grade.commons.dto.BaseResult;
 import com.windsoft.lt.grade.domain.Admin;
 import com.windsoft.lt.grade.web.admin.service.AdminService;
 import org.junit.Test;
@@ -23,7 +24,7 @@ public class AdminServiceTest {
 
     @Test
     public void testLogin(){
-        Admin admin = adminService.login("ricost@foxmail.com","123456");
+        BaseResult admin = adminService.login("ricost@foxmail.com","123456");
         System.out.println(admin);
     }
 

@@ -6,5 +6,5 @@ package com.windsoft.lt.grade.commons.constant;
  * @Date: 2019/10/14 18:11
  */
 public class ConstantUtils {
-    public static final String SESSION_ADMIN = "admin";
+    public static final String SESSION_USER = "user";
 }

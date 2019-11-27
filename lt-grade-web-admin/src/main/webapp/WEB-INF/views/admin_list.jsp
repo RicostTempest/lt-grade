@@ -37,7 +37,7 @@
                 <!-- DataTales Example -->
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">管理员信息</h6>
+                        <h6 class="m-0 font-weight-bold text-primary">管理员列表</h6>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -113,7 +113,7 @@
     //     ];
     // });
 
-    $(function () {
+    $(function (data) {
        $("#dataTable").DataTable({
            "info":true,
            "lengthChange":false,
@@ -124,7 +124,10 @@
            "deferRender":true,
            "pageLength": 6,
            "ajax":{
-               "url":"/admin/page"
+               "url":"/admin/page",
+               "param":{
+                   "id" : 1
+               }
            },
            "columns":[
                {"data":"id"},
@@ -149,13 +152,14 @@
                {"data":function (row,type,val,meta) {
                        var detailUrl = "/admin/detail?id=" + row.id;
                        var editlUrl = "/admin/form?id=" + row.id;
+                       var deleteUrl = "/admin/delete?id=" + row.id;
                        return '<a href="#" class="btn btn-info btn-circle btn-sm" onclick="detail(\'' + detailUrl + '\')">\n' +
                            "        <i class=\"fas fa-info-circle\"></i>\n" +
                            "    </a>\n" +
                            "    <a href=\""+editlUrl+"\" class=\"btn btn-warning btn-circle btn-sm\">\n" +
                            "        <i class=\"fa fa-edit\"></i>\n" +
                            "    </a>\n" +
-                           "    <a href='#' class=\"btn btn-danger btn-circle btn-sm\">\n" +
+                           '    <a href="#"  class="btn btn-danger btn-circle btn-sm" onclick="adminDelete(\'' + deleteUrl + '\')">\n' +
                            "        <i class=\"fas fa-trash\"></i>\n" +
                            "    </a>"
                    }},
@@ -201,7 +205,7 @@
                 });
             }
         });
-    }
+    };
 
     function activity(url) {
         $.ajax({
@@ -216,7 +220,44 @@
                 });
             }
         });
-    }
+    };
+
+    function adminDelete(url) {
+        $("#modalMessage").html("确定删除数据吗？");
+        //点击删除按钮时弹框
+        $("#modalDefault").modal("show");
+
+        //绑定删除事件
+        $("#checkOk").bind("click",function () {
+            setTimeout(function () {
+                $.ajax({
+                    "url":url,
+                    "type":"get",
+                    "dataType":"JSON",
+                    "success":function (data) {
+                        //解除事件绑定
+                        $("#checkOk").unbind("click");
+                        if(data.status == 200){
+                            $("#checkOk").bind("click",function () {
+                                window.location.reload();
+                            });
+                        }
+                        //删除失败
+                        else{
+                            //强制更改绑定事件
+                            $("#checkOk").bind("click",function () {
+                                $("#modalDefault").modal("hide");
+                            });
+                        }
+                        $("#modalDefault").modal("show");
+                        $("#modalMessage").html(data.message);
+                    }
+                });
+            },500);
+        });
+    };
+
+
 </script>
 </body>
 </html>
