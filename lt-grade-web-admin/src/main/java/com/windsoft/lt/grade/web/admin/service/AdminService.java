@@ -22,4 +22,6 @@ public interface AdminService {
     int count(Admin admin);
 
     BaseResult save(Admin admin);
+
+    BaseResult orActivity(Admin admin);
 }

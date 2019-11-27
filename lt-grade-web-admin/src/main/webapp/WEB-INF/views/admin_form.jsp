@@ -31,15 +31,10 @@
             <!-- Topbar -->
             <jsp:include page="../includes/nav.jsp"/>
             <!-- End of Topbar -->
-
             <div class="container">
-                <div class="row justify-content-center" style="height: 500px">
-                    <div class="align-self-center col-lg-8">
-                        <div class="alert alert-${baseResult.status == 200 ? "success":"danger"} alert-dismissible" ${baseResult == null ? "style='display:none'" : ""}>
-                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                            ${baseResult.message}
-                        </div>
-                        <form class="shadow mb-4" action="/admin/save", method="post" >
+                <div class="row justify-content-center align-self-center" >
+                    <div class="align-self-center col-lg-8" >
+                        <form class="shadow mb-4 align-items-center" action="/admin/save" method="post" >
                             <div class="card-header py-3">
                                 <h6 class="m-0 font-weight-bold text-primary">用户管理</h6>
                             </div>
@@ -54,12 +49,13 @@
 
                             <div class="card-footer">
                                 <button type="button" class="btn btn-default" onclick="history.go(-1)">返回</button>
-                                <button type="submit" class="btn btn-primary float-right">Sign in</button>
+                                <button type="submit" class="btn btn-primary float-right">保存</button>
                             </div>
                         </form>
-                    </div>
-                    <div class="align-self-center col-lg-8">
-
+                        <div class="alert alert-${baseResult.status == 200 ? "success":"danger"} alert-dismissible" ${baseResult == null ? "style='display:none'" : ""}>
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            ${baseResult.message}
+                        </div>
                     </div>
                 </div>
             </div>

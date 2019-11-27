@@ -24,5 +24,5 @@ public class Admin extends BaseEntity {
     private String email;
     @JsonIgnore
     private String password;
-    private boolean status;
+    private boolean activity;
 }

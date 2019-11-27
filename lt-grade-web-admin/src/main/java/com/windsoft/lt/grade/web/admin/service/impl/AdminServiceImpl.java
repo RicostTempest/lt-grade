@@ -8,6 +8,7 @@ import com.windsoft.lt.grade.web.admin.dao.AdminDao;
 import com.windsoft.lt.grade.web.admin.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.DigestUtils;
 
 import java.util.Date;
@@ -22,6 +23,7 @@ import java.util.Map;
  * @Version V1.0
  **/
 @Service
+@Transactional
 public class AdminServiceImpl implements AdminService {
 
     @Autowired
@@ -90,5 +92,23 @@ public class AdminServiceImpl implements AdminService {
             }
         }
         return BaseResult.success("信息修改成功");
+    }
+
+    @Override
+    public BaseResult orActivity(Admin admin) {
+
+        BaseResult baseResult = BaseResult.fail();
+        if (admin != null){
+            admin.setActivity(!admin.isActivity());
+            adminDao.update(admin);
+            if(admin.isActivity()){
+                baseResult = BaseResult.success("成功激活");
+            }
+            else {
+                baseResult = BaseResult.success("成功禁用");
+            }
+        }
+
+        return baseResult;
     }
 }

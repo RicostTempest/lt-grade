@@ -88,4 +88,12 @@ public class AdminController {
             return "admin_form";
         }
     }
+
+    @ResponseBody
+    @RequestMapping(value = "activity",method = RequestMethod.GET)
+    public BaseResult orActivity(Long id){
+        BaseResult baseResult = adminService.orActivity(adminService.getById(id));
+
+        return baseResult;
+    }
 }

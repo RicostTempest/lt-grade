@@ -5,7 +5,7 @@
           dt.id,
           dt.email,
           dt.password,
-          dt.status,
+          dt.activity,
           dt.created,
           dt.updated
     </sql>
@@ -56,7 +56,7 @@
         SET
             email = #{email},
             password = #{password},
-            status = #{status},
+            activity = #{activity},
             created = #{created},
             updated = #{updated}
         WHERE id = #{id}
@@ -66,14 +66,14 @@
         INSERT INTO admin (
          `email`,
          `password`,
-         `status`,
+         `activity`,
          `created`,
          `updated`
          )
          VALUES (
          #{email},
          #{password},
-         #{status},
+         #{activity},
          #{created},
          #{updated}
          )
