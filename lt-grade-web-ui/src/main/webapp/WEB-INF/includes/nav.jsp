@@ -5,7 +5,7 @@
     <!-- menu -->
     <div class="navbar navbar-expand-md navbar-light default-menu justify-content-between" role="navigation">
         <div class="container-fluid">
-            <a href="#nav" class="site-logo navbar-brand">Orion</a>
+            <a href="#nav" class="site-logo navbar-brand">LEAF-TEMPEST</a>
             <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#v" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
