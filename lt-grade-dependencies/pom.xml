@@ -40,6 +40,7 @@
         <jackson.version>2.9.5</jackson.version>
         <apache-httpclient.version>4.5.5</apache-httpclient.version>
         <kaptcha.version>2.3</kaptcha.version>
+        <lombok.version>1.18.4</lombok.version>
     </properties>
 
     <dependencyManagement>
@@ -206,6 +207,15 @@
                 <version>${kaptcha.version}</version>
             </dependency>
             <!--Google Code End-->
+
+            <!--Lombok Begin-->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <!--Lombok End-->
+
         </dependencies>
     </dependencyManagement>
 
