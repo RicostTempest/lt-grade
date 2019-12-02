@@ -24,7 +24,7 @@ public class UserTest {
 
     @Test
     public void getByEmail(){
-        userService.login("760699178@qq.com","123456");
-        System.out.println();
+
+        System.out.println(userService.login("760699178@qq.com","123456").getMessage());
     }
 }

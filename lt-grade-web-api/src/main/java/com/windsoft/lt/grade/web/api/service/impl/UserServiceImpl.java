@@ -31,6 +31,7 @@ public class UserServiceImpl implements UserService {
 
             //判断密文密码时否正确
             if(md5Password.equals(user.getPassword())){
+
                 return BaseResult.success("登录成功",user);
             }
             else {
