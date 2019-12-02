@@ -29,7 +29,7 @@ public class PermissionInterceptor implements HandlerInterceptor {
         Admin admin = (Admin) httpServletRequest.getSession().getAttribute(ConstantUtils.SESSION_USER);
         if(admin != null){
             if(modelAndView != null && modelAndView.getViewName() != null){
-                if (modelAndView.getViewName().endsWith("login") || modelAndView.getViewName().endsWith("register")){
+                if (modelAndView.getViewName().endsWith("login")){
                 httpServletResponse.sendRedirect("/main");
                 }
             }
