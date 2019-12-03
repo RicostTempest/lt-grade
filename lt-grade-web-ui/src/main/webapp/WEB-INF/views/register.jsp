@@ -2,11 +2,18 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <!-- Custom Styles -->
-    <link rel="stylesheet" type="text/css" href="/static/assets/css/usercommit.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+    <!-- Loding font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" type="text/css" href="/static/assets/css/usercommit.css">
     <title>注册 - 风叶</title>
 </head>
 <body>
@@ -29,17 +36,16 @@
                 <h1>Register</h1>
 
                 <!-- register form -->
-                <form>
+                <form action="/register" method="post">
                     <div class="form-group">
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-
+                        <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter email">
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                            <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Password">
                         </div>
                         <div class="form-group col-md-6">
-                            <input type="password" class="form-control" id="inputPassword2" placeholder="Repate Password">
+                            <input type="password" class="form-control" id="inputPassword2" name="rePassword" placeholder="Repate Password">
                         </div>
                     </div>
 
@@ -50,7 +56,7 @@
                 <!-- End register form -->
                 <hr>
                 <div class="text-center">
-                    <a class="small" href="login.html">Already have an account? Login!</a>
+                    <a class="small" href="/login">Already have an account? Login!</a>
                 </div>
 
             </div>More Templates

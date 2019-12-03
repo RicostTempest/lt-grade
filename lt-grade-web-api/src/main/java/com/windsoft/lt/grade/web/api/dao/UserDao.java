@@ -2,6 +2,7 @@ package com.windsoft.lt.grade.web.api.dao;
 
 import com.windsoft.lt.grade.domain.User;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @InterfaceName UserDao
@@ -11,6 +12,9 @@ import org.springframework.stereotype.Repository;
  * @Version V1.0
  **/
 @Repository
+@Transactional
 public interface UserDao {
-    public User getByEmail(String email);
+    User getByEmail(String email);
+    void insert(User user);
+    void update(User user);
 }

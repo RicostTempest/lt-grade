@@ -2,14 +2,20 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Custom Styles -->
-    <link rel="stylesheet" type="text/css" href="/static/assets/css/usercommit.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>登录 - 风叶</title>
+    <!-- Loding font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700" rel="stylesheet">
 
+    <!-- Custom Styles -->
+    <link rel="stylesheet" type="text/css" href="/static/assets/css/usercommit.css">
+
+    <title>登录 - 风叶</title>
 </head>
 <body>
 
@@ -31,19 +37,19 @@
                 <h1>Login</h1>
 
                 <!-- Loging form -->
-                <form>
+                <form action="/login" method="post">
                     <div class="form-group">
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter email" value="${email}">
 
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password" value="${password}">
                     </div>
 
                     <div class="form-check">
 
                         <label class="switch">
-                            <input type="checkbox">
+                            <input type="checkbox" name="isRemember" ${isRemember == true ? "checked" : ""}>
                             <span class="slider round"></span>
                         </label>
                         <label class="form-check-label">Remember me</label>

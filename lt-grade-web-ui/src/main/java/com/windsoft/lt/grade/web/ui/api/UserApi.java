@@ -1,5 +1,6 @@
 package com.windsoft.lt.grade.web.ui.api;
 
+import com.windsoft.lt.grade.commons.dto.BaseResult;
 import com.windsoft.lt.grade.commons.utils.HttpClientUtils;
 import com.windsoft.lt.grade.commons.utils.MapperUtils;
 import com.windsoft.lt.grade.web.ui.dto.User;
@@ -19,16 +20,28 @@ import java.util.List;
 
 public class UserApi {
 
-    public static User login(User user) throws Exception {
+    public static BaseResult login(User user) throws Exception {
+
         List<BasicNameValuePair> params = new ArrayList<>();
         params.add(new BasicNameValuePair("email",user.getEmail()));
         params.add(new BasicNameValuePair("password",user.getPassword()));
 
         String json = HttpClientUtils.doPost(API.API_USERS_LOGIN, params.toArray(new BasicNameValuePair[params.size()]));
 
-        User user1 = MapperUtils.json2pojoByTree(json,"data", User.class);
+        BaseResult baseResult = MapperUtils.json2pojo(json, BaseResult.class);
 
-        return user;
+        return baseResult;
     }
+
+    public static BaseResult register(User user) throws Exception {
+        List<BasicNameValuePair> params = new ArrayList<>();
+        String jsonUser = MapperUtils.obj2json(user);
+        params.add(new BasicNameValuePair("user",jsonUser));
+
+        String json = HttpClientUtils.doPost(API.API_USERS_REGISTER, params.toArray(new BasicNameValuePair[params.size()]));
+        BaseResult result = MapperUtils.json2pojo(json,BaseResult.class);
+        return result;
+    }
+
 
 }

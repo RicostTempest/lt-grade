@@ -23,4 +23,45 @@
         dt.email = #{email}
     </select>
 
+    <insert id="insert">
+        INSERT INTO user (
+         `uid`,
+         `stu_id`,
+         `tec_id`,
+         `email`,
+         `password`,
+         `nickname`,
+         `created`,
+         `updated`,
+         `juridisdiction`,
+         )
+         VALUES (
+         #{uid},
+         #{stuId},
+         #{tec_id},
+         #{email},
+         #{password},
+         #{nickname},
+         #{created},
+         #{updated},
+         #{juridisdiction}
+         )
+    </insert>
+
+    <update id="update">
+        UPDATE
+            user
+        SET
+         uid = #{uid},
+         stu_id = #{stuId},
+         tec_id = #{tec_id},
+         email = #{email},
+         password = #{password},
+         nickname = #{nickname},
+         created = #{created},
+         updated = #{updated},
+         juridisdiction = #{juridisdiction}
+        WHERE id = #{id}
+    </update>
+
 </mapper>

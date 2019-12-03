@@ -1,6 +1,7 @@
 package com.windsoft.lt.grade.web.api.web.controller.v1;
 
 import com.windsoft.lt.grade.commons.dto.BaseResult;
+import com.windsoft.lt.grade.commons.utils.MapperUtils;
 import com.windsoft.lt.grade.domain.User;
 import com.windsoft.lt.grade.web.api.dao.UserDao;
 import com.windsoft.lt.grade.web.api.service.UserService;
@@ -27,7 +28,6 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-
     @RequestMapping(value = "login", method = RequestMethod.POST)
     public BaseResult login(String email, String password){
         BaseResult baseResult = BaseResult.fail();
@@ -37,8 +37,26 @@ public class UserController {
             User user = (User) baseResult.getData();
 
             BeanUtils.copyProperties(user,userDTO);
+
+            baseResult.setData(userDTO);
         }
 
+        return baseResult;
+    }
+
+    @RequestMapping(value = "register", method = RequestMethod.POST)
+    public BaseResult register(String userJson) throws Exception {
+        BaseResult baseResult = BaseResult.fail();
+        User user = MapperUtils.json2pojo(userJson,User.class);
+        baseResult = userService.save(user);
+        if(baseResult.getStatus() == BaseResult.STATUS_SUCCESS){
+            UserDTO userDTO = new UserDTO();
+            user = (User) baseResult.getData();
+
+            BeanUtils.copyProperties(user,userDTO);
+
+            baseResult.setData(userDTO);
+        }
         return baseResult;
     }
 }
