@@ -909,7 +909,7 @@ hr {
 }
 .popup-content {
     position: fixed;
-    top: 0;
+    top: 60px;
     right: 0;
     bottom: 0;
     height: 100%;
@@ -917,7 +917,7 @@ hr {
     z-index: 9999;
     overflow: hidden;
     overflow-y: scroll;
-    min-width: 270px;
+    width: 270px;
     background-color: #2d333a;
     transform: translateX(100%);
     transition: all .5s ease-in-out;
@@ -994,6 +994,10 @@ hr {
     letter-spacing: .5px;
     border-radius: 50px;
     font-family: "Raleway",sans-serif;
+}
+
+.content{
+    padding-top: 70px;
 }
 
 /*==================== page header =====================*/

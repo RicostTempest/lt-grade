@@ -294,9 +294,6 @@
         </div>
     </section>
 
-
-    <jsp:include page="../includes/menu.jsp"/>
-
     <jsp:include page="../includes/footer.jsp"/>
 
     <jsp:include page="../includes/copyright.jsp"/>

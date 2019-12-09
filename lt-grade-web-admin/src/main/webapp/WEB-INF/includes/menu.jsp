@@ -8,7 +8,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fab fa-gg"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">风叶-后台 <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3">风叶-后台 <span class="badge badge-pill badge-secondary">New</span></div>
     </a>
 
     <!-- Divider -->
@@ -24,15 +24,29 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAdmin" aria-expanded="true" aria-controls="collapseTwo">
             <i class="fas fa-fw fa-cog"></i>
             <span>管理员管理</span>
         </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="collapseAdmin" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Admin Controller:</h6>
                 <a class="collapse-item" href="/admin/list">管理员列表</a>
                 <a class="collapse-item" href="/admin/form">添加管理员</a>
+            </div>
+        </div>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUser" aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>用户管理</span>
+        </a>
+        <div id="collapseUser" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">User Controller:</h6>
+                <a class="collapse-item" href="/user/list">用户列表</a>
+                <a class="collapse-item" href="/user/form">添加用户</a>
             </div>
         </div>
     </li>

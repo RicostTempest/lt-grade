@@ -105,6 +105,8 @@ public class AdminServiceImpl implements AdminService {
         return BaseResult.success("信息修改成功");
     }
 
+
+
     @Override
     public BaseResult orActivity(Admin admin) {
 

@@ -24,6 +24,10 @@
 <!-- DateTime  -->
 <script src="/static/assets/app/datetime.js"></script>
 
+<!-- Chosen  -->
+<script src="/static/assets/vendor/jquery/chosen.jquery.min.js"></script>
+<script src="/static/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+
 <!--App-->
 <script src="/static/assets/app/app.js"></script>
 

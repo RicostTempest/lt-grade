@@ -20,6 +20,7 @@ import javax.validation.constraints.Pattern;
 @Data
 @EqualsAndHashCode(callSuper=false)
 public class Admin extends BaseEntity {
+    private Long id;
     @Pattern(regexp = RegexpUtils.EMAIL, message = "邮箱格式不正确")
     private String email;
     @JsonIgnore

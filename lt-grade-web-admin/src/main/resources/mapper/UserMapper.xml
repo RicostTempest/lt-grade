@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.windsoft.lt.grade.web.admin.dao.UserDao">
+    <sql id="userColumns">
+          dt.uid,
+          dt.stu_id,
+          dt.tec_id,
+          dt.email,
+          dt.nickname,
+          dt.created,
+          dt.updated,
+          dt.juridisdiction
+    </sql>
+
+    <select id="page" resultType="User" parameterType="java.util.Map">
+        SELECT
+        <include refid="userColumns"/>
+        FROM
+        user AS dt
+        LIMIT #{start}, #{length}
+    </select>
+
+    <select id="count" resultType="java.lang.Integer">
+        select count(*) from user AS dt
+    </select>
+
+    <select id="getById" resultType="User">
+        SELECT
+        <include refid="userColumns"/>
+        FROM
+        user AS dt
+        WHERE
+        uid = #{uid}
+    </select>
+
+    <update id="update">
+        UPDATE
+            user
+        SET
+            stu_id = #{stuId},
+            tec_id = #{tecId},
+            email = #{email},
+            nickname = #{nickname},
+            updated = #{updated},
+            juridisdiction = #{juridisdiction}
+        WHERE uid = #{uid}
+    </update>
+
+    <insert id="insert">
+        INSERT INTO user (
+         `stu_id`,
+         `tec_id`,
+         `email`,
+         `password`,
+         `nickname`,
+         `created`,
+         `updated`,
+         `juridisdiction`
+         )
+         VALUES (
+         #{stuId},
+         #{tecId},
+         #{email},
+         #{password},
+         #{nickname},
+         #{created},
+         #{updated},
+         #{juridisdiction}
+         )
+    </insert>
+
+    <delete id="delete">
+        DELETE FROM admin WHERE id = #{id}
+    </delete>
+
+</mapper>

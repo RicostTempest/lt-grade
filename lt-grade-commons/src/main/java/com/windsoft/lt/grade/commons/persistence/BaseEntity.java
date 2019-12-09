@@ -8,7 +8,6 @@ import java.util.Date;
 @Data
 @EqualsAndHashCode(callSuper=false)
 public abstract class BaseEntity implements Serializable {
-    private Long id;
     private Date created;
     private Date updated;
 

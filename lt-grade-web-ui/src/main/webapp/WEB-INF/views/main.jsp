@@ -9,9 +9,24 @@
 
     <jsp:include page="../includes/nav.jsp"/>
 
+    <section class="speciality">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 mt-5">
+                    <div class="text-center"><a href="blogpage.html" class="btn btn-primary main-btn btn-reload"><i class="fa fa-spinner fa-spin"></i> 加入集体</a></div>
+                </div>
+                <div class="col-12 mt-5">
+                    <div class="text-center"><a href="/organization_form" class="btn btn-primary main-btn btn-reload"><i class="fa fa-spinner fa-spin"></i>创建集体</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!--=== blog page ===-->
     <section class="blog-page-1">
+
         <div class="container-fluid">
+
             <div class="row">
 
                 <div class="col-lg-12">
@@ -19,9 +34,6 @@
 
                     </div>
                 </div>
-            </div>
-            <div class="col-12 mt-5">
-                <div class="text-center"><a href="blogpage.html" class="btn btn-primary main-btn btn-reload"><i class="fa fa-spinner fa-spin"></i> 加入集体</a></div>
             </div>
             <div class="row">
                 <div class="col">

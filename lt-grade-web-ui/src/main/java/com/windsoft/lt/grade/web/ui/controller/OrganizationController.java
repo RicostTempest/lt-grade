@@ -18,4 +18,9 @@ public class OrganizationController {
     public String organization(){
         return "organization";
     }
+
+    @RequestMapping(value = "organization_form", method = RequestMethod.GET)
+    public String created(){
+        return "organization_form";
+    }
 }

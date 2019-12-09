@@ -1,5 +1,6 @@
 package com.windsoft.lt.grade.domain;
 
+import com.windsoft.lt.grade.commons.persistence.BaseEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -15,7 +16,7 @@ import java.util.Date;
  **/
 @Data
 @EqualsAndHashCode(callSuper=false)
-public class User implements Serializable {
+public class User extends BaseEntity {
     private Long uid;
     private String email;
     private String password;

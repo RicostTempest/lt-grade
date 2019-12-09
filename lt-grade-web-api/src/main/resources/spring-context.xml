@@ -18,7 +18,5 @@
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
 
-    <!-- 开启事务注解驱动 -->
-    <tx:annotation-driven transaction-manager="transactionManager" />
 
 </beans>
