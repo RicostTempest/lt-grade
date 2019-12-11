@@ -2,7 +2,10 @@ package com.windsoft.lt.grade.web.admin.service;
 
 import com.windsoft.lt.grade.commons.dto.BaseResult;
 import com.windsoft.lt.grade.commons.dto.PageInfo;
+import com.windsoft.lt.grade.domain.Student;
 import com.windsoft.lt.grade.domain.User;
+
+import java.util.List;
 
 /**
  * @InterfaceName UserService
@@ -12,10 +15,6 @@ import com.windsoft.lt.grade.domain.User;
  * @Version V1.0
  **/
 
-public interface UserService {
-    User getById(Long id);
-    PageInfo<User> page(int start, int length, int draw, User user);
-    int count(User user);
-    BaseResult save(User user);
-    BaseResult delete(User user);
+public interface StudentService {
+    List<Student> selectAll();
 }

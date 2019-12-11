@@ -4,8 +4,10 @@ import com.windsoft.lt.grade.commons.constant.ConstantUtils;
 import com.windsoft.lt.grade.commons.dto.BaseResult;
 import com.windsoft.lt.grade.commons.dto.PageInfo;
 import com.windsoft.lt.grade.domain.Admin;
+import com.windsoft.lt.grade.domain.Student;
 import com.windsoft.lt.grade.domain.User;
 import com.windsoft.lt.grade.web.admin.service.AdminService;
+import com.windsoft.lt.grade.web.admin.service.StudentService;
 import com.windsoft.lt.grade.web.admin.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,6 +20,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -34,11 +37,14 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private StudentService studentService;
+
     @ModelAttribute
-    public User getUser(Long id){
+    public User getUser(Long uid){
         User user = null;
-        if(id != null){
-            user = userService.getById(id);
+        if(uid != null){
+            user = userService.getById(uid);
         }
         else
             user = new User();
@@ -51,7 +57,9 @@ public class UserController {
     }
 
     @RequestMapping(value = "form", method = RequestMethod.GET)
-    public String form(){
+    public String form(Model model){
+        List<Student> students = studentService.selectAll();
+        model.addAttribute("students",students);
         return "user_form";
     }
 
@@ -86,5 +94,12 @@ public class UserController {
             model.addAttribute("baseResult", baseResult);
             return "user_form";
         }
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "delete", method = RequestMethod.GET)
+    public BaseResult delete(User user){
+        BaseResult baseResult = userService.delete(user);
+        return baseResult;
     }
 }

@@ -159,7 +159,7 @@
                {"data":function (row,type,val,meta) {
                        var detailUrl = "/user/detail?id=" + row.uid;
                        var editlUrl = "/user/form?id=" + row.uid;
-                       var deleteUrl = "/user/delete?id=" + row.uid;
+                       var deleteUrl = "/user/delete?uid=" + row.uid;
                        return '<a href="#" class="btn btn-info btn-circle btn-sm" onclick="detail(\'' + detailUrl + '\')">\n' +
                            "        <i class=\"fas fa-info-circle\"></i>\n" +
                            "    </a>\n" +

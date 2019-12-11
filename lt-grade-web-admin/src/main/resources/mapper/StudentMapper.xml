@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.windsoft.lt.grade.web.admin.dao.StudentDao">
+    <sql id="stuColumns">
+          dt.stu_id,
+          dt.gra_id,
+          dt.stu_name,
+          dt.stu_sex,
+          dt.enrollment,
+          dt.length_scholling,
+          dt.phone,
+          dt.birthplace,
+          dt.politics_status,
+          dt.ic_number
+    </sql>
+
+    <select id="selectAll" resultType="Student">
+        SELECT
+        <include refid="stuColumns"/>
+        FROM
+        student AS dt
+    </select>
+</mapper>

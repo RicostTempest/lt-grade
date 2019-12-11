@@ -77,4 +77,17 @@ public class UserServiceImpl implements UserService {
         }
         return BaseResult.success("信息修改成功");
     }
+
+    @Override
+    public BaseResult delete(User user) {
+        BaseResult baseResult = BaseResult.fail("未知错误");
+
+        try {
+            userDao.delete(user);
+            baseResult = BaseResult.success("数据删除成功");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return baseResult;
+    }
 }

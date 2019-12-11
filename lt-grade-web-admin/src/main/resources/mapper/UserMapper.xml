@@ -70,7 +70,7 @@
     </insert>
 
     <delete id="delete">
-        DELETE FROM admin WHERE id = #{id}
+        DELETE FROM user WHERE uid = #{uid}
     </delete>
 
 </mapper>

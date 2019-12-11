@@ -46,7 +46,10 @@
                                 <div class="form-group row">
                                     <label for="stuId" class="col-sm-2 col-form-label">认证号</label>
                                     <div class="col-sm-10">
-                                        <form:input path="stuId" cssClass="form-control required" placeholder="认证号"/>
+<%--                                        <form:input path="stuId" cssClass="form-control required" placeholder="认证号"/>--%>
+                                        <form:select cssClass="form-control required col-sm-10 form-control-chosen" path="stuId" items="${students}" itemValue="stuId" itemLabel="stuId">
+
+                                        </form:select>
                                     </div>
                                 </div>
 
