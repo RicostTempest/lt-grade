@@ -21,8 +21,6 @@ public class User extends BaseEntity {
     private String email;
     private String password;
     private String nickname;
-    private Date created;
-    private Date updated;
     private int juridisdiction;
     private Long stuId;
     private Long tecId;

@@ -57,7 +57,7 @@ public class UserServiceImpl implements UserService {
             //增加用户
             if(user.getUid() == null){
                 user.setCreated(new Date());
-                user.setPassword(DigestUtils.md5DigestAsHex(user.getPassword().getBytes()));
+                user.setNickname("unknow");
                 user.setJuridisdiction(0);
                 userDao.insert(user);
             }
@@ -66,7 +66,7 @@ public class UserServiceImpl implements UserService {
                 userDao.update(user);
             }
 
-            return BaseResult.success("保存信息成功");
+            return BaseResult.success("保存信息成功",user);
         }
     }
 

@@ -1,6 +1,8 @@
 package com.windsoft.lt.grade.web.ui.controller;
 
 import com.windsoft.lt.grade.commons.dto.BaseResult;
+import com.windsoft.lt.grade.web.ui.api.UserApi;
+import com.windsoft.lt.grade.web.ui.dto.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,8 +24,11 @@ public class RegisterController {
     }
 
     @RequestMapping(value = "register", method = RequestMethod.POST)
-    public String register(String email, String password){
+    public String register(User user) throws Exception {
         BaseResult result = BaseResult.fail();
+        result = UserApi.register(user);
+
+        User userDTO = (User) result.getData();
 
         return "register";
     }

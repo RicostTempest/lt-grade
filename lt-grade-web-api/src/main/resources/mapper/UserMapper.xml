@@ -3,15 +3,14 @@
 <mapper namespace="com.windsoft.lt.grade.web.api.dao.UserDao">
 
     <sql id="userColumns">
-        dt.uid,
-        dt.stu_id,
-        dt.tec_id,
-        dt.email,
-        dt.password,
-        dt.nickname,
-        dt.created,
-        dt.updated,
-        dt.juridisdiction
+          dt.uid,
+          dt.stu_id,
+          dt.tec_id,
+          dt.email,
+          dt.nickname,
+          dt.created,
+          dt.updated,
+          dt.juridisdiction
     </sql>
 
     <select id="getByEmail" resultType="User">
@@ -23,9 +22,21 @@
         dt.email = #{email}
     </select>
 
+    <update id="update">
+        UPDATE
+            user
+        SET
+            stu_id = #{stuId},
+            tec_id = #{tecId},
+            email = #{email},
+            nickname = #{nickname},
+            updated = #{updated},
+            juridisdiction = #{juridisdiction}
+        WHERE uid = #{uid}
+    </update>
+
     <insert id="insert">
         INSERT INTO user (
-         `uid`,
          `stu_id`,
          `tec_id`,
          `email`,
@@ -33,12 +44,11 @@
          `nickname`,
          `created`,
          `updated`,
-         `juridisdiction`,
+         `juridisdiction`
          )
          VALUES (
-         #{uid},
          #{stuId},
-         #{tec_id},
+         #{tecId},
          #{email},
          #{password},
          #{nickname},
@@ -47,21 +57,5 @@
          #{juridisdiction}
          )
     </insert>
-
-    <update id="update">
-        UPDATE
-            user
-        SET
-         uid = #{uid},
-         stu_id = #{stuId},
-         tec_id = #{tec_id},
-         email = #{email},
-         password = #{password},
-         nickname = #{nickname},
-         created = #{created},
-         updated = #{updated},
-         juridisdiction = #{juridisdiction}
-        WHERE id = #{id}
-    </update>
 
 </mapper>

@@ -36,10 +36,11 @@ public class UserApi {
     public static BaseResult register(User user) throws Exception {
         List<BasicNameValuePair> params = new ArrayList<>();
         String jsonUser = MapperUtils.obj2json(user);
-        params.add(new BasicNameValuePair("user",jsonUser));
+        params.add(new BasicNameValuePair("userJson",jsonUser));
 
         String json = HttpClientUtils.doPost(API.API_USERS_REGISTER, params.toArray(new BasicNameValuePair[params.size()]));
         BaseResult result = MapperUtils.json2pojo(json,BaseResult.class);
+        result.setData(MapperUtils.json2pojoByTree(json,"data",User.class));
         return result;
     }
 
