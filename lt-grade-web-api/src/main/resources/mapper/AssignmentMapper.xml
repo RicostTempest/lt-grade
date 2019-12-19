@@ -1,26 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.windsoft.lt.grade.web.api.dao.UserDao">
+<mapper namespace="com.windsoft.lt.grade.web.api.dao.AssignmentDao">
 
-    <sql id="userColumns">
-          dt.uid,
-          dt.stu_id,
-          dt.tec_id,
-          dt.email,
-          dt.password,
-          dt.nickname,
+    <sql id="assColumns">
+          dt.ass_id,
+          dt.name,
+          dt.content,
+          dt.type,
           dt.created,
-          dt.updated,
-          dt.juridisdiction
+          dt.deadline
     </sql>
 
-    <select id="getByEmail" resultType="User">
+    <sql id="orgMap">
+        org.org_id as "organization.orgId",
+        org.org_name as "organization.orgName",
+        org.org_type as "organization.orgType",
+        org.intro as "organization.intro",
+        org.created as "organization.created"
+    </sql>
+
+    <select id="getAll" resultType="Assignment">
         SELECT
-        <include refid="userColumns"/>
+        <include refid="assColumns"/>,
+        <include refid="orgMap"/>
         FROM
-        user AS dt
+        assignment as dt
+        LEFT JOIN
+        organization as org
+        ON dt.org_id = org.org_id
         WHERE
-        dt.email = #{email}
+        dt.org_id = #{id}
     </select>
 
     <update id="update">

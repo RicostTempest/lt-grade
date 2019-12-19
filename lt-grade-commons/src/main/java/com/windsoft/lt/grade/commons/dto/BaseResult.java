@@ -36,6 +36,9 @@ public class BaseResult implements Serializable {
     public static BaseResult fail(int status, String message){
         return createResult(status, message,null);
     }
+    public static BaseResult fail(String message, Object data){
+        return createResult(STATUS_FAIL,message,data);
+    }
 
     public int getStatus() {
         return status;
