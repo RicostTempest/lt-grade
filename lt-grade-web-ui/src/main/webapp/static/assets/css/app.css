@@ -25,6 +25,7 @@ body {
     line-height: 1;
     background-color: #ffffff;
     color: #3d4853;
+    padding-top: 60px;
 }
 *{
     outline-color: transparent !important;
@@ -1522,7 +1523,7 @@ hr {
 /*==================== blog page ===========================*/
 .blog-page-1 .blog-post {
     background-color: #ffffff;
-    margin-bottom: 40px;
+    margin-bottom: 5px;
     box-shadow: 0 0 8px 0 rgba(50, 50, 50, 0.2);
     border-radius: 5px;
     overflow: hidden;
@@ -2640,4 +2641,8 @@ footer.sticky-footer .copyright {
     font-size: 0.8rem;
 }
 
+.animated{
+    padding: 50px;
+    height: 500px;
+}
 

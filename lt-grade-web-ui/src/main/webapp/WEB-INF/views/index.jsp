@@ -18,8 +18,8 @@
                         <div class="header-intro-title"><h3>The best Bootstrap theme ever seen</h3></div>
                         <div class="header-intro-tag">Stop find another theme from now, Guarantee. </div>
                         <ul class="list-inline">
-                            <li class="list-inline-item"><a href="#" class="btn btn-primary main-btn bg-main">Get Started</a></li>
-                            <li class="list-inline-item"><a href="#" class="btn btn-primary main-btn bg-green">Purchase Now</a></li>
+                            <li class="list-inline-item"><a href="/login" class="btn btn-primary main-btn bg-main">登 录</a></li>
+                            <li class="list-inline-item"><a href="/register" class="btn btn-primary main-btn bg-green">注 册</a></li>
                         </ul>
                     </div>
                 </div>

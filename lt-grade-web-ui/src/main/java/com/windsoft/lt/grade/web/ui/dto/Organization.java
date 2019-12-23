@@ -1,21 +1,20 @@
-package com.windsoft.lt.grade.web.api.web.dto;
+package com.windsoft.lt.grade.web.ui.dto;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-import java.io.Serializable;
 import java.util.Date;
 
 /**
- * @ClassName OrganizationDTO
+ * @ClassName Organization
  * @Description
  * @Author Ricost
- * @Date 2019/12/18 8:52
+ * @Date 2019/12/20 20:39
  * @Version V1.0
  **/
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class OrganizationDTO implements Serializable {
+public class Organization {
     private Long orgId;
     private String orgName;
     private int orgType;
@@ -23,5 +22,4 @@ public class OrganizationDTO implements Serializable {
     private Date created;
     private int juridisdiction;
     private String nickname;
-
 }

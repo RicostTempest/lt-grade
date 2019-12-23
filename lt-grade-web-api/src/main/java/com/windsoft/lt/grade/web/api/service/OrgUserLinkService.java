@@ -13,7 +13,7 @@ import com.windsoft.lt.grade.domain.User;
 
 public interface OrgUserLinkService {
     BaseResult selectSelf(User user);
-    BaseResult getOrgList(User user);
+    BaseResult getOrgList(Long uid);
     BaseResult getKeyWordList(String keyword);
     BaseResult getMember(Long id);
 }

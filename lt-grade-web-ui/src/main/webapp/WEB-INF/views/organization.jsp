@@ -1,4 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -70,27 +72,23 @@
                                 <!--one-->
                                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                     <a href="#" class="post-image" ><img src="/static/assets/images/thumb/blog-item_01.jpg" alt="#" class="img-fluid featured-img"></a>
+
                                 </div>
                                 <!--two-->
                                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="card-details">
-                                                <p>
-                                                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing hidden in the middle of text.
-                                                </p>
-                                                <p>
-                                                    All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or
-                                                </p>
-                                                <h2>The best preparation for tomorrow is doing your best today </h2>
-                                                <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat, duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                                <h3>There are two ways of spreading light to be the candle</h3>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, excepteur sint occaecat.</p>
-
-                                                <p>Cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <ul class="list-group">
+                                        <c:forEach items="${member}" var="item">
+                                            <li class="list-group-item">
+                                                <div class="media">
+                                                    <svg t="1576995280356" class="icon" viewBox="0 0 1029 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4609" width="64" height="64"><path d="M514.4 34.4c-266.4 0-482.4 213.6-482.4 477.6s216 477.6 482.4 477.6 482.4-213.6 482.4-477.6-216-477.6-482.4-477.6z m264.96 530.88c3.36 64.8-67.68 101.28-119.52 104.64 24-22.56 86.88-59.52 74.4-111.84-4.8-21.12-31.68-34.08-61.44-27.84 38.4-33.12 103.68-20.16 106.56 35.04z m-160.32-249.6c-17.28 14.4-48.48 33.6-50.4 59.52-2.4 39.84 58.56 76.32 25.92 126.72-12.48 19.2-33.12 27.36-59.52 39.36-3.36-5.76 6.72-10.56 11.04-16.8 40.8-59.04-42.24-78.72-31.68-151.2 10.08-70.08 93.12-94.56 169.92-104.64-21.6 15.36-42.24 28.32-65.28 47.04z m-214.56 33.6c30.72-56.64 122.4-90.72 155.04-151.2 7.68-14.88 13.92-37.44 3.84-56.16 12.96 12.48 22.56 35.04 22.56 59.52 0 72-76.32 113.76-113.76 162.24-8.16 11.04-18.72 27.36-18.72 44.64 0.48 39.36 41.28 83.52 56.16 115.68-25.92-17.28-57.6-40.32-80.16-67.2-23.04-26.4-45.6-70.08-24.96-107.52z m-9.6 164.16c6.72-0.48 19.68-3.36 29.76-1.92-19.2 9.12-51.36 10.56-65.28 29.76 14.4 10.56 35.04 10.08 54.24 11.04 78.72 3.36 177.12-3.36 244.32-14.88 2.4 4.8-9.12 13.44-16.8 18.72-42.24 31.2-174.24 39.84-264.96 33.6-30.24-1.92-99.84-10.08-100.8-37.44-0.48-33.12 84.48-36.48 119.52-38.88z m156.96 175.2c8.64-1.92 17.28-8.16 24.48-7.68 21.6 1.44 29.76 24 48.48 27.84-59.52 36.48-203.52 50.88-263.04 5.76-2.88-33.12 24-36.96 48.48-42.72 5.76 1.92-1.92 4.8-1.92 7.68 16.8 29.28 100.8 18.72 143.52 9.12z m-160.32-25.92c-20.64-3.84-56.64-14.88-57.6-31.68-1.44-22.56 35.52-32.16 52.32-35.52 8.64 0.96-6.24 6.24-3.84 12.96 32.16 31.68 132 22.56 180.96 12.96 10.08-1.92 20.64-8.16 27.84-7.68 18.72 1.44 30.72 23.52 46.56 25.92-57.12 25.92-166.56 37.92-246.24 23.04zM221.6 753.92c2.4-41.76 103.2-53.28 134.4-25.92-17.76 4.32-63.84-1.92-65.28 22.56-0.48 9.12 15.84 20.16 25.92 24.48 60.96 23.04 182.88 26.4 283.68 14.88 46.56-5.28 134.4-21.12 123.36-69.12 13.92 1.44 26.4 10.56 27.84 24.48 5.76 51.36-112.8 72.96-160.32 78.24-103.68 11.52-233.76 9.12-313.44-18.72-26.4-9.6-57.6-25.92-56.16-50.88zM594.56 882.56H514.4c-70.08-7.68-137.28-17.76-193.92-42.72 148.32 35.52 364.32 33.12 468.48-42.72 5.76-4.32 11.04-12 18.72-11.04-26.4 77.76-126.72 83.04-213.12 96.48z" fill="#108ee9" p-id="4610"></path></svg>
+                                                    <div class="media-body">
+                                                        <h5 class="mt-0">${item.nickname}</h5>
+                                                        <p>${item.stuId}</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </c:forEach>
+                                    </ul>
                                 </div>
                                 <!--three-->
                                 <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
@@ -99,36 +97,22 @@
                                             <div class="card-header" id="headingOne">
                                                 <h5 class="mb-0">
                                                     <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                        测试1
+                                                        作业
                                                     </button>
                                                 </h5>
                                             </div>
 
                                             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                                 <div class="card-body">
-                                                    <div class="my-3 p-3 bg-white rounded shadow-sm">
+                                                    <c:forEach items="${assignment['work']}" var="ass">
                                                         <div class="media text-muted pt-3">
-                                                            <svg t="1575515222985" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2624" width="128" height="128"><path d="M921.6 851.968c-5.12-4.096-123.904-99.328-239.616-36.864-145.408 78.848-285.696 110.592-359.424 81.92-50.176-19.456-88.064-45.056-114.688-66.56l499.712-133.12c14.336-4.096 24.576-14.336 28.672-28.672L815.104 389.12c4.096-14.336 0-29.696-10.24-39.936L588.8 133.12c-10.24-10.24-25.6-14.336-39.936-10.24l-279.552 77.824c-14.336 4.096-24.576 15.36-28.672 28.672L89.088 799.744v1.024c0 2.048-1.024 3.072-1.024 5.12V815.104c0 2.048 1.024 4.096 1.024 6.144v1.024c1.024 2.048 1.024 3.072 2.048 5.12 1.024 0 1.024 1.024 1.024 1.024 1.024 2.048 2.048 3.072 3.072 5.12v1.024c5.12 7.168 68.608 88.064 196.608 138.24 26.624 10.24 59.392 16.384 95.232 16.384 92.16 0 209.92-34.816 332.8-101.376 67.584-36.864 148.48 27.648 148.48 27.648 17.408 14.336 43.008 11.264 57.344-6.144 15.36-17.408 13.312-43.008-4.096-57.344zM314.368 273.408l234.496-65.536 182.272 182.272L664.576 624.64l-399.36 106.496 168.96-168.96c29.696 8.192 62.464 1.024 84.992-21.504 33.792-33.792 33.792-88.064 0-121.856a85.9136 85.9136 0 0 0-121.856 0c-23.552 23.552-30.72 56.32-21.504 84.992L207.872 672.768l106.496-399.36zM833.536 309.248c8.192 8.192 18.432 12.288 28.672 12.288s20.48-4.096 28.672-12.288c16.384-16.384 16.384-41.984 0-58.368l-204.8-204.8c-15.36-15.36-40.96-15.36-57.344 1.024-16.384 16.384-16.384 41.984 0 58.368l204.8 203.776z" fill="#333C4F" p-id="2625"></path></svg>
+                                                            <svg t="1576999997289" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1290" width="64" height="64"><path d="M493.987 578.298L178.58 893.686c-6.696 6.706-10.784 16.01-10.784 26.24 0 20.462 16.563 37.216 37.215 37.216a37.177 37.177 0 0 0 15.063-3.16s525.49-227.764 531.451-230.563c12.276-5.562 21.77-16.354 25.486-29.765l85.043-306.467 17.118 16.937c17.862 17.862 46.7 17.862 64.564 0 17.871-17.862 17.871-46.72 0-64.565l-262.182-262.2c-17.862-17.862-46.7-17.862-64.564 0-17.87 17.864-17.87 46.72 0 64.565l16.928 16.935-307.029 85.408c-13.401 3.925-24.187 13.592-29.774 26.24L66.933 801.595c-1.853 4.451-2.971 9.304-2.971 14.5 0 20.661 16.745 37.216 37.215 37.216 10.612 0 20.1-4.288 26.794-11.339l314.844-314.844c-4.28-10.994-6.696-22.713-6.696-35.18 0-51.354 41.685-93.04 93.039-93.04s93.039 41.686 93.039 93.04-41.686 93.038-93.04 93.038c-12.465 0-24.186-2.417-35.17-6.687z" p-id="1291"></path></svg>
                                                             <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                                                                <strong class="d-block text-gray-dark">@username</strong>
-                                                                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                                                                <strong class="d-block text-gray-dark">${ass.name}</strong>
+                                                                <strong class="d-block text-gray-dark">${ass.deadline}</strong>
                                                             </p>
                                                         </div>
-                                                        <div class="media text-muted pt-3">
-                                                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect fill="#e83e8c" width="100%" height="100%"></rect><text fill="#e83e8c" dy=".3em" x="50%" y="50%">32x32</text></svg>
-                                                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                                                                <strong class="d-block text-gray-dark">@username</strong>
-                                                                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-                                                            </p>
-                                                        </div>
-                                                        <div class="media text-muted pt-3">
-                                                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect fill="#6f42c1" width="100%" height="100%"></rect><text fill="#6f42c1" dy=".3em" x="50%" y="50%">32x32</text></svg>
-                                                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                                                                <strong class="d-block text-gray-dark">@username</strong>
-                                                                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-                                                            </p>
-                                                        </div>
-                                                    </div>
+                                                    </c:forEach>
                                                 </div>
                                             </div>
                                         </div>
@@ -136,33 +120,21 @@
                                             <div class="card-header" id="headingTwo">
                                                 <h5 class="mb-0">
                                                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                        测试2
+                                                        实验
                                                     </button>
                                                 </h5>
                                             </div>
                                             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                                 <div class="card-body">
-                                                    <div class="media text-muted pt-3">
-                                                        <svg t="1575515222985" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2624" width="128" height="128"><path d="M921.6 851.968c-5.12-4.096-123.904-99.328-239.616-36.864-145.408 78.848-285.696 110.592-359.424 81.92-50.176-19.456-88.064-45.056-114.688-66.56l499.712-133.12c14.336-4.096 24.576-14.336 28.672-28.672L815.104 389.12c4.096-14.336 0-29.696-10.24-39.936L588.8 133.12c-10.24-10.24-25.6-14.336-39.936-10.24l-279.552 77.824c-14.336 4.096-24.576 15.36-28.672 28.672L89.088 799.744v1.024c0 2.048-1.024 3.072-1.024 5.12V815.104c0 2.048 1.024 4.096 1.024 6.144v1.024c1.024 2.048 1.024 3.072 2.048 5.12 1.024 0 1.024 1.024 1.024 1.024 1.024 2.048 2.048 3.072 3.072 5.12v1.024c5.12 7.168 68.608 88.064 196.608 138.24 26.624 10.24 59.392 16.384 95.232 16.384 92.16 0 209.92-34.816 332.8-101.376 67.584-36.864 148.48 27.648 148.48 27.648 17.408 14.336 43.008 11.264 57.344-6.144 15.36-17.408 13.312-43.008-4.096-57.344zM314.368 273.408l234.496-65.536 182.272 182.272L664.576 624.64l-399.36 106.496 168.96-168.96c29.696 8.192 62.464 1.024 84.992-21.504 33.792-33.792 33.792-88.064 0-121.856a85.9136 85.9136 0 0 0-121.856 0c-23.552 23.552-30.72 56.32-21.504 84.992L207.872 672.768l106.496-399.36zM833.536 309.248c8.192 8.192 18.432 12.288 28.672 12.288s20.48-4.096 28.672-12.288c16.384-16.384 16.384-41.984 0-58.368l-204.8-204.8c-15.36-15.36-40.96-15.36-57.344 1.024-16.384 16.384-16.384 41.984 0 58.368l204.8 203.776z" fill="#333C4F" p-id="2625"></path></svg>
-                                                        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                                                            <strong class="d-block text-gray-dark">@username</strong>
-                                                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-                                                        </p>
-                                                    </div>
-                                                    <div class="media text-muted pt-3">
-                                                        <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect fill="#e83e8c" width="100%" height="100%"></rect><text fill="#e83e8c" dy=".3em" x="50%" y="50%">32x32</text></svg>
-                                                        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                                                            <strong class="d-block text-gray-dark">@username</strong>
-                                                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-                                                        </p>
-                                                    </div>
-                                                    <div class="media text-muted pt-3">
-                                                        <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect fill="#6f42c1" width="100%" height="100%"></rect><text fill="#6f42c1" dy=".3em" x="50%" y="50%">32x32</text></svg>
-                                                        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                                                            <strong class="d-block text-gray-dark">@username</strong>
-                                                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-                                                        </p>
-                                                    </div>
+                                                    <c:forEach items="${assignment['experiment']}" var="ass">
+                                                        <div class="media text-muted pt-3">
+                                                            <svg t="1576999997289" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1290" width="64" height="64"><path d="M493.987 578.298L178.58 893.686c-6.696 6.706-10.784 16.01-10.784 26.24 0 20.462 16.563 37.216 37.215 37.216a37.177 37.177 0 0 0 15.063-3.16s525.49-227.764 531.451-230.563c12.276-5.562 21.77-16.354 25.486-29.765l85.043-306.467 17.118 16.937c17.862 17.862 46.7 17.862 64.564 0 17.871-17.862 17.871-46.72 0-64.565l-262.182-262.2c-17.862-17.862-46.7-17.862-64.564 0-17.87 17.864-17.87 46.72 0 64.565l16.928 16.935-307.029 85.408c-13.401 3.925-24.187 13.592-29.774 26.24L66.933 801.595c-1.853 4.451-2.971 9.304-2.971 14.5 0 20.661 16.745 37.216 37.215 37.216 10.612 0 20.1-4.288 26.794-11.339l314.844-314.844c-4.28-10.994-6.696-22.713-6.696-35.18 0-51.354 41.685-93.04 93.039-93.04s93.039 41.686 93.039 93.04-41.686 93.038-93.04 93.038c-12.465 0-24.186-2.417-35.17-6.687z" p-id="1291"></path></svg>
+                                                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                                                                <strong class="d-block text-gray-dark">${ass.name}</strong>
+                                                                <strong class="d-block text-gray-dark">${ass.deadline}</strong>
+                                                            </p>
+                                                        </div>
+                                                    </c:forEach>
                                                 </div>
                                             </div>
                                         </div>
@@ -170,13 +142,23 @@
                                             <div class="card-header" id="headingThree">
                                                 <h5 class="mb-0">
                                                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                        测试3
+                                                        测试
                                                     </button>
                                                 </h5>
                                             </div>
                                             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                                                 <div class="card-body">
-                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                    <div class="card-body">
+                                                        <c:forEach items="${assignment['test']}" var="ass">
+                                                            <div class="media text-muted pt-3">
+                                                                <svg t="1576999997289" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1290" width="64" height="64"><path d="M493.987 578.298L178.58 893.686c-6.696 6.706-10.784 16.01-10.784 26.24 0 20.462 16.563 37.216 37.215 37.216a37.177 37.177 0 0 0 15.063-3.16s525.49-227.764 531.451-230.563c12.276-5.562 21.77-16.354 25.486-29.765l85.043-306.467 17.118 16.937c17.862 17.862 46.7 17.862 64.564 0 17.871-17.862 17.871-46.72 0-64.565l-262.182-262.2c-17.862-17.862-46.7-17.862-64.564 0-17.87 17.864-17.87 46.72 0 64.565l16.928 16.935-307.029 85.408c-13.401 3.925-24.187 13.592-29.774 26.24L66.933 801.595c-1.853 4.451-2.971 9.304-2.971 14.5 0 20.661 16.745 37.216 37.215 37.216 10.612 0 20.1-4.288 26.794-11.339l314.844-314.844c-4.28-10.994-6.696-22.713-6.696-35.18 0-51.354 41.685-93.04 93.039-93.04s93.039 41.686 93.039 93.04-41.686 93.038-93.04 93.038c-12.465 0-24.186-2.417-35.17-6.687z" p-id="1291"></path></svg>
+                                                                <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                                                                    <strong class="d-block text-gray-dark">${ass.name}</strong>
+                                                                    <strong class="d-block text-gray-dark">${ass.deadline}</strong>
+                                                                </p>
+                                                            </div>
+                                                        </c:forEach>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

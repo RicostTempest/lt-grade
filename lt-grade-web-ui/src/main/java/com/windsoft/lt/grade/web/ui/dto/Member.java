@@ -1,20 +1,18 @@
-package com.windsoft.lt.grade.web.api.web.dto;
+package com.windsoft.lt.grade.web.ui.dto;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-import java.io.Serializable;
-
 /**
- * @ClassName MemberDTO
+ * @ClassName Member
  * @Description
  * @Author Ricost
- * @Date 2019/12/19 13:30
+ * @Date 2019/12/22 13:22
  * @Version V1.0
  **/
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class MemberDTO implements Serializable {
+public class Member {
     private String nickname;
     private Long stuId;
     private int juridisdiction;

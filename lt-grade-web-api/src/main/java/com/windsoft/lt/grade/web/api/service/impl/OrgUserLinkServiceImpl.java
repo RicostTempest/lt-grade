@@ -47,11 +47,11 @@ public class OrgUserLinkServiceImpl implements OrgUserLinkService {
     }
 
     @Override
-    public BaseResult getOrgList(User user) {
+    public BaseResult getOrgList(Long uid) {
         List<LinkOrgUser> orgUsers;
         BaseResult result = BaseResult.fail();
 
-        orgUsers = orgUserLinkDao.getOrgList(user.getUid());
+        orgUsers = orgUserLinkDao.getOrgList(uid);
 
         //验证获取成功
         if (orgUsers != null){

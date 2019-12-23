@@ -11,7 +11,7 @@
 
 <!--=== 系统介绍 ===-->
 <div class="col-12 mt-5" style="height: 500px">
-    <div class="middle-box text-center animated fadeInDown" >
+    <div class="middle-box text-center animated" >
         <h1>404</h1>
         <h3 > 页面未能够找到！! !</h3>
         <div >

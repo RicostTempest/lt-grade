@@ -4,7 +4,6 @@ import com.windsoft.lt.grade.commons.dto.BaseResult;
 import com.windsoft.lt.grade.commons.utils.HttpClientUtils;
 import com.windsoft.lt.grade.commons.utils.MapperUtils;
 import com.windsoft.lt.grade.web.ui.dto.User;
-import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 
 import java.util.ArrayList;
@@ -18,7 +17,7 @@ import java.util.List;
  * @Version V1.0
  **/
 
-public class UserApi {
+public class UserAPI {
 
     public static BaseResult login(User user) throws Exception {
 
@@ -28,9 +27,10 @@ public class UserApi {
 
         String json = HttpClientUtils.doPost(API.API_USERS_LOGIN, params.toArray(new BasicNameValuePair[params.size()]));
 
-        BaseResult baseResult = MapperUtils.json2pojo(json, BaseResult.class);
+        BaseResult result = MapperUtils.json2pojo(json, BaseResult.class);
+        result.setData(MapperUtils.json2pojoByTree(json,"data",User.class));
 
-        return baseResult;
+        return result;
     }
 
     public static BaseResult register(User user) throws Exception {

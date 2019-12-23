@@ -3,7 +3,7 @@ package com.windsoft.lt.grade.web.ui.controller;
 import com.windsoft.lt.grade.commons.constant.ConstantUtils;
 import com.windsoft.lt.grade.commons.dto.BaseResult;
 import com.windsoft.lt.grade.commons.utils.CookieUtils;
-import com.windsoft.lt.grade.web.ui.api.UserApi;
+import com.windsoft.lt.grade.web.ui.api.UserAPI;
 import com.windsoft.lt.grade.web.ui.dto.User;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
@@ -55,7 +55,8 @@ public class LoginController {
             CookieUtils.deleteCookie(request,response,COOKIE_NAME_USER_INFO);
         }
 
-        BaseResult baseResult = UserApi.login(user);
+        BaseResult baseResult = UserAPI.login(user);
+
 
         if (baseResult.getStatus() == BaseResult.STATUS_FAIL){
             model.addAttribute("message",baseResult.getMessage());

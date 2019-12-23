@@ -7,21 +7,18 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * @ClassName OrganizationDTO
+ * @ClassName ResourceDTO
  * @Description
  * @Author Ricost
- * @Date 2019/12/18 8:52
+ * @Date 2019/12/19 23:36
  * @Version V1.0
  **/
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class OrganizationDTO implements Serializable {
-    private Long orgId;
-    private String orgName;
-    private int orgType;
-    private String intor;
+public class ResourceDTO implements Serializable {
+    private Long resId;
+    private String resName;
+    private int resType;
+    private String url;
     private Date created;
-    private int juridisdiction;
-    private String nickname;
-
 }

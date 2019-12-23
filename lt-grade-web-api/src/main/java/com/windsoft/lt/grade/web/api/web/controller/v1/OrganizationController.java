@@ -2,12 +2,12 @@ package com.windsoft.lt.grade.web.api.web.controller.v1;
 
 import com.windsoft.lt.grade.commons.dto.BaseResult;
 import com.windsoft.lt.grade.domain.LinkOrgUser;
-import com.windsoft.lt.grade.domain.User;
 import com.windsoft.lt.grade.web.api.service.OrgUserLinkService;
 import com.windsoft.lt.grade.web.api.web.dto.MemberDTO;
 import com.windsoft.lt.grade.web.api.web.dto.OrganizationDTO;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,9 +28,10 @@ public class OrganizationController {
     @Autowired
     private OrgUserLinkService linkService;
 
-    @RequestMapping(value = "getAll", method = RequestMethod.GET)
-    public BaseResult getOrg2User(User user){
-        BaseResult result = linkService.getOrgList(user);
+    @RequestMapping(value = "getAll/{uid}", method = RequestMethod.GET)
+    public BaseResult getOrg2User(@PathVariable(value = "uid")
+                                              Long uid){
+        BaseResult result = linkService.getOrgList(uid);
 
         transform(result);
 
@@ -46,8 +47,9 @@ public class OrganizationController {
         return result;
     }
 
-    @RequestMapping(value = "getMember", method = RequestMethod.GET)
-    private BaseResult getMember(Long id){
+    @RequestMapping(value = "getMember/{id}", method = RequestMethod.GET)
+    private BaseResult getMember(@PathVariable(value = "id")
+                                             Long id){
         BaseResult result = linkService.getMember(id);
         List<MemberDTO> memberDTOS = new ArrayList<MemberDTO>();
 
