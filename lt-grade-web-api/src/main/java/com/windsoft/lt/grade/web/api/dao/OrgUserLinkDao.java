@@ -20,5 +20,7 @@ public interface OrgUserLinkDao {
     List<LinkOrgUser> getOrgList(@Param("uid") Long uid);
     List<LinkOrgUser> search(String keyword);
     List<LinkOrgUser> getMember(Long id);
+    void insert(LinkOrgUser link);
+    void connect(LinkOrgUser link);
 
 }

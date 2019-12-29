@@ -33,19 +33,19 @@
         <div class="col-lg-8">
             <div class="login">
 
-                <h1>Register</h1>
+                <h1>注册</h1>
 
                 <!-- register form -->
                 <form action="/register" method="post">
                     <div class="form-group">
-                        <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+                        <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="输入电子邮箱">
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Password">
+                            <input type="password" class="form-control" id="inputPassword" name="password" placeholder="密码">
                         </div>
                         <div class="form-group col-md-6">
-                            <input type="password" class="form-control" id="inputPassword2" name="rePassword" placeholder="Repate Password">
+                            <input type="password" class="form-control" id="inputPassword2" name="rePassword" placeholder="重复输入">
                         </div>
                     </div>
 
@@ -56,7 +56,7 @@
                 <!-- End register form -->
                 <hr>
                 <div class="text-center">
-                    <a class="small" href="/login">Already have an account? Login!</a>
+                    <a class="small" href="/login">已经有账号了？登录</a>
                 </div>
 
             </div>More Templates

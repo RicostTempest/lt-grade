@@ -1,12 +1,9 @@
 package com.windsoft.lt.grade.web.admin.web.controller;
 
-import com.windsoft.lt.grade.commons.constant.ConstantUtils;
 import com.windsoft.lt.grade.commons.dto.BaseResult;
 import com.windsoft.lt.grade.commons.dto.PageInfo;
-import com.windsoft.lt.grade.domain.Admin;
 import com.windsoft.lt.grade.domain.Student;
 import com.windsoft.lt.grade.domain.User;
-import com.windsoft.lt.grade.web.admin.service.AdminService;
 import com.windsoft.lt.grade.web.admin.service.StudentService;
 import com.windsoft.lt.grade.web.admin.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,10 +38,10 @@ public class UserController {
     private StudentService studentService;
 
     @ModelAttribute
-    public User getUser(Long uid){
+    public User getUser(Long id){
         User user = null;
-        if(uid != null){
-            user = userService.getById(uid);
+        if(id != null){
+            user = userService.getById(id);
         }
         else
             user = new User();

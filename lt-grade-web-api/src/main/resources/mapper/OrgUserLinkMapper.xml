@@ -87,26 +87,33 @@
     </update>
 
     <insert id="insert">
-        INSERT INTO user (
-         `stu_id`,
-         `tec_id`,
-         `email`,
-         `password`,
-         `nickname`,
-         `created`,
-         `updated`,
-         `juridisdiction`
-         )
+        <selectKey keyProperty="organization.orgId" order="AFTER" resultType="java.lang.Long">
+            select last_insert_id()
+        </selectKey>
+        INSERT INTO organization (
+         `org_name`,
+         `org_type`,
+         `intro`,
+         `created`
+        )
          VALUES (
-         #{stuId},
-         #{tecId},
-         #{email},
-         #{password},
-         #{nickname},
-         #{created},
-         #{updated},
-         #{juridisdiction}
-         )
+         #{organization.orgName},
+         #{organization.orgType},
+         #{organization.intro},
+         #{organization.created}
+        )
     </insert>
 
+    <insert id="connect">
+        INSERT INTO user__organization (
+        `org_id`,
+        `uid`,
+        `controller`
+        )
+        VALUES (
+        #{organization.orgId},
+        #{user.uid},
+        #{controller}
+        )
+    </insert>
 </mapper>

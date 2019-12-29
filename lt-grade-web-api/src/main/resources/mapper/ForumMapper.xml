@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.windsoft.lt.grade.web.api.dao.OrgUserLinkDao">
+<mapper namespace="com.windsoft.lt.grade.web.api.dao.ForumDao">
 
     <sql id="linkColumns">
 
@@ -15,40 +15,33 @@
     </sql>
 
     <sql id="userMap">
-        a.uid as "user.uid",
-        a.nickname as "user.nickname",
-        a.stu_id as "user.stuId",
-        a.juridisdiction as "user.juridisdiction"
+        b.uid as "user.uid",
+        b.nickname as "user.nickname",
+        b.stu_id as "user.stuId",
+        b.juridisdiction as "user.juridisdiction"
     </sql>
 
     <sql id="linkAll">
-        	user a
+        	forum a
             LEFT JOIN
-            user__organization b
+            user b
             ON
             a.uid = b.uid
             LEFT JOIN
             organization c
             ON
-            b.org_id = c.org_id
+            a.org_id = c.org_id
     </sql>
 
-    <select id="selectSelf" resultType="Organization">
-        SELECT b.*
-        FROM
-        <include refid="linkAll"/>
-        and a.uid = #{uid}
-    </select>
-
-    <select id="getOrgList" resultType="LinkOrgUser">
+    <select id="getAll" resultType="Forum">
         SELECT
         <include refid="orgMap"/>,
         <include refid="userMap"/>,
-        b.controller
+        a.*
         FROM
         <include refid="linkAll"/>
         WHERE
-        a.uid = #{uid}
+        a.org_id = #{id}
     </select>
 
     <select id="search" resultType="LinkOrgUser">
@@ -87,25 +80,23 @@
     </update>
 
     <insert id="insert">
-        INSERT INTO user (
-         `stu_id`,
-         `tec_id`,
-         `email`,
-         `password`,
-         `nickname`,
+        INSERT INTO forum (
+         `fom_id`,
+         `uid`,
+         `org_id`,
+         `document`,
          `created`,
          `updated`,
-         `juridisdiction`
+         `reply`
          )
          VALUES (
-         #{stuId},
-         #{tecId},
-         #{email},
-         #{password},
-         #{nickname},
+         #{fomId},
+         #{uid},
+         #{orgId},
+         #{document},
          #{created},
          #{updated},
-         #{juridisdiction}
+         #{reply}
          )
     </insert>
 

@@ -5,9 +5,9 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="footer-item-title"><h4>Orion's Intro</h4></div>
+                <div class="footer-item-title"><h4>系统简介</h4></div>
                 <div class="subscribe">
-                    <p>All in One digital resource management & complete eCommerce solution for selling digital products</p>
+                    <p>本系统为大学三年级上学期期末作业使用bootStrop系统框架搭建实现，后台是用SSM框架</p>
                 </div>
                 <div class="list-wrap">
                     <ul class="list-inline social-links">
@@ -20,80 +20,26 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="footer-item-title"><h4>Our Network</h4></div>
+                <div class="footer-item-title"><h4>反馈</h4></div>
                 <div class="just-links">
                     <ul class="list-unstyled">
-                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>About us</a></li>
-                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>New Products</a></li>
-                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>Orders And Returns</a></li>
-                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>New Products</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="footer-item-title"><h4>Recent Post</h4></div>
-                <div class="just-links">
-                    <ul class="list-unstyled">
-                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>About us</a></li>
-                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>New Products</a></li>
-                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>New Products</a></li>
-                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>Orders And Returns</a></li>
-                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>New Products</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="footer-item-title"><h4>WPDM Blog</h4></div>
-                <div class="just-links">
-                    <ul class="list-unstyled">
-                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>About us</a></li>
-                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>New Products</a></li>
-                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>New Products</a></li>
-                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>Orders And Returns</a></li>
-                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>New Products</a></li>
+                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>关于我们</a></li>
+                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>新企划</a></li>
+                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>新内容</a></li>
+                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>意见反馈</a></li>
+                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>计划</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <hr>
-        <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="footer-item-title"><h4>Information</h4></div>
-                <div class="just-links">
-                    <ul class="list-unstyled">
-                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>About us</a></li>
-                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>New Products</a></li>
-                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>Orders And Returns</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="footer-item-title"><h4>My account</h4></div>
-                <div class="just-links">
-                    <ul class="list-unstyled">
-                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>My account</a></li>
-                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>Order-history</a></li>
-                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>Wish List</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="footer-item-title"><h4>Customer Service</h4></div>
-                <div class="just-links">
-                    <ul class="list-unstyled">
-                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>Contact us</a></li>
-                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>Returns</a></li>
-                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>Our Site Map</a></li>
-                    </ul>
-                </div>
-            </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="footer-item-title"><h4>Contact Us</h4></div>
+                <div class="footer-item-title"><h4>与我们联系</h4></div>
                 <div class="just-links">
                     <ul class="list-unstyled">
-                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>2506 SARYOBA ROAD, MSATGOLP</a></li>
-                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>+(123) 456 789</a></li>
-                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>info@nextlevel.com</a></li>
+                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>浙江省宁波市宁波财经学院</a></li>
+                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>(+86)159 6809 3213</a></li>
+                        <li class=""><a href="#"><i class="ion ion-ios-arrow-thin-right"></i>ricost@gmail.com</a></li>
                     </ul>
                 </div>
             </div>

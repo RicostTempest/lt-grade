@@ -20,6 +20,8 @@ public class API {
 
     public static final String ASSIGNMENT = "/assignments";
 
+    public static final String FORUM = "/forums";
+
     //会员管理接口 - 登录
     public static final String API_USERS_LOGIN = HOST + USERS + "/login";
 
@@ -27,10 +29,16 @@ public class API {
 
     public static final String API_ORGANIZATION_GET = HOST + ORGANIZATION + "/getAll/";
 
+    public static final String API_ORGANIZATION_SEARCH = HOST + ORGANIZATION + "/search/";
+
     public static final String API_RESOURCE_GET = HOST + RESOURCE + "/getAll/";
 
     public static final String API_RESOURCE_GET_MEMBER = HOST + ORGANIZATION + "/getMember/";
 
+    public static final String API_RESOURCE_CREATE = HOST + ORGANIZATION + "/created/";
+
     public static final String API_ASSIGNMENT_GET = HOST + ASSIGNMENT + "/getAll/";
+
+    public static final String API_FORUM_SEND = HOST + FORUM + "/send/";
 
 }

@@ -113,4 +113,12 @@ public class OrgUserLinkServiceImpl implements OrgUserLinkService {
 
         return result;
     }
+
+    @Override
+    public BaseResult create(LinkOrgUser orgUser) {
+        orgUserLinkDao.insert(orgUser);
+        System.out.println(orgUser.getOrganization().getOrgId());
+        orgUserLinkDao.connect(orgUser);
+        return BaseResult.success("插入成功");
+    }
 }

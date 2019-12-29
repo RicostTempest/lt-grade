@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="col-12 mt-5">
                     <div class="text-center"><a href="blogpage.html" class="btn btn-primary main-btn btn-reload"><i class="fa fa-spinner fa-spin"></i> 加入集体</a></div>
-                    <div class="text-center"><a href="/organization_form" class="btn btn-primary main-btn btn-reload"><i class="fa fa-spinner fa-spin"></i>创建集体</a></div>
+                    <div class="text-center"><a href="/organization/form" class="btn btn-primary main-btn btn-reload"><i class="fa fa-spinner fa-spin"></i>创建集体</a></div>
                 </div>
             </div>
         </div>
@@ -50,7 +50,7 @@
                                             <li class="list-inline-item"><a href="#"><i class="ion ion-chatbubbles"></i>Comments 113</a></li>
                                         </ul>
                                         <a href="single-post.html"><h4 class="media-heading">${org.orgName}</h4></a>
-                                        <p>${org.intor == null ? "暂无" : org.intro}</p>
+                                        <p>${org.intro == null ? "暂无" : org.intro}</p>
                                         <a href="/organization?id=${org.orgId}" class="blog-post-link">进入集体 <i class="fa fa-angle-double-right"></i></a>
                                     </div>
                                 </div>

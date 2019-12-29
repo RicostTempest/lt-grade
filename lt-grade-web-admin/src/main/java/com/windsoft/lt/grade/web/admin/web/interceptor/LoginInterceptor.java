@@ -1,7 +1,5 @@
 package com.windsoft.lt.grade.web.admin.web.interceptor;
 
-import com.windsoft.lt.grade.commons.constant.ConstantUtils;
-import com.windsoft.lt.grade.domain.Admin;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -20,11 +18,7 @@ public class LoginInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
-        Admin admin = (Admin) httpServletRequest.getSession().getAttribute(ConstantUtils.SESSION_USER);
-        if (admin == null){
-            httpServletResponse.sendRedirect("/login");
-        }
-        //放行
+
         return true;
     }
 

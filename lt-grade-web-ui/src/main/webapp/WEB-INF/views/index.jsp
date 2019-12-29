@@ -15,8 +15,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="header-intro-wrap text-center">
-                        <div class="header-intro-title"><h3>The best Bootstrap theme ever seen</h3></div>
-                        <div class="header-intro-tag">Stop find another theme from now, Guarantee. </div>
+                        <div class="header-intro-title"><h3>风叶班级管理系统</h3></div>
+                        <div class="header-intro-tag">发现更合适的班级管理方式 </div>
                         <ul class="list-inline">
                             <li class="list-inline-item"><a href="/login" class="btn btn-primary main-btn bg-main">登 录</a></li>
                             <li class="list-inline-item"><a href="/register" class="btn btn-primary main-btn bg-green">注 册</a></li>
@@ -34,41 +34,6 @@
                 <div class="col-lg-12 text-center">
                     <div class="section-tag">PROFISE</div>
                     <div class="section-title mb-5"><h2>更加全面的班级管理</h2></div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="feature-wrap">
-                        <div><i class="ion ion-ios-cloud-outline"></i></div>
-                        <a href="#">Multi-file Package</a>
-                        <p>You can use multiple file with single entry. at front-end those files will be downloaded as a zip</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="feature-wrap">
-                        <div><i class="ion ion-ios-gear-outline"></i></div>
-                        <a href="#">Multi-file Package</a>
-                        <p>You can use multiple file with single entry. at front-end those files will be downloaded as a zip</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="feature-wrap">
-                        <div><i class="ion ion-ios-bell-outline"></i></div>
-                        <a href="#">Multi-file Package</a>
-                        <p>You can use multiple file with single entry. at front-end those files will be downloaded as a zip</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="feature-wrap">
-                        <div><i class="ion ion-ios-timer-outline"></i></div>
-                        <a href="#">Multi-file Package</a>
-                        <p>You can use multiple file with single entry. at front-end those files will be downloaded as a zip</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="feature-wrap">
-                        <div><i class="ion ion-ios-cloud-outline"></i></div>
-                        <a href="#">Multi-file Package</a>
-                        <p>You can use multiple file with single entry. at front-end those files will be downloaded as a zip</p>
-                    </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="feature-wrap">
@@ -102,9 +67,9 @@
                 <div class="col-12">
                     <div class="call-to-action-wrap">
                         <div class="call-to-action-title">
-                            <h3>Trust our? Review our projects completed on ThemeForest.net in last year, all the best.</h3>
+                            <h3>没有通过高校认证？联系我们，马上获取</h3>
                             <div class=" call-btn-wrap text-center">
-                                <a href="#" class="btn btn-primary main-btn">Purchase Now</a>
+                                <a href="#" class="btn btn-primary main-btn">获取认证</a>
                             </div>
                         </div>
                     </div>
@@ -119,10 +84,9 @@
             <div class="row">
                 <div class="col-lg-6 align-self-center">
                     <div class="about-wrap">
-                        <div class="section-tag">Welcome to Wpdm</div>
-                        <div class="section-title"><h2>About Us</h2></div>
+                        <div class="section-title"><h2>团队介绍</h2></div>
                         <p>
-                            We design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores. Design is our art and our passion. Our goal is to create the best products with a pixel-perfect eye for detail and a high standard for aesthetic excellence.
+                            本团队暂时没有太多的成员，长期招募各种程序员，以及前台客服，漂亮小姐姐以及喜欢编程的朋友优先，PS：我老板很漂亮滴。
                         </p>
                     </div>
                 </div>
@@ -141,8 +105,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title-wrap text-center">
-                        <div class="section-tag">Our Best</div>
-                        <div class="section-title"><h2>Reviews And Clients</h2></div>
+                        <div class="section-tag">我们的优势</div>
+                        <div class="section-title"><h2>评论和用户</h2></div>
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-10 col-sm-12 mx-auto">
@@ -151,13 +115,13 @@
                             <div class="testimonial-wrap mx-auto">
                                 <div class="testimon-detail">
                                     <div class="testimon-icon"><i class="ion ion-quote"></i></div>
-                                    <strong>Great Plugin</strong>
-                                    <p>Switching to WordPress from Joomla was greatly helped by a great download manager for WordPress, WPDM. With unsurpassed support I was able to fine tune my downloads section on the website to my delight. </p>
+                                    <strong>好用的插件</strong>
+                                    <p>大量的视图插件，更好的查看使用信息，更好的用户体验</p>
                                 </div>
                                 <div class="testimon-img-wrap">
                                     <div class="testimon-img"><img src="static/assets/images/team_3.jpg" alt="Profile Image"></div>
-                                    <div class="testimon-name">Rob Vens</div>
-                                    <div class="testimon-tag">Reflektis.com</div>
+                                    <div class="testimon-name">Ricost</div>
+                                    <div class="testimon-tag">ricost.com</div>
                                 </div>
                             </div>
                         </div>
@@ -165,13 +129,13 @@
                             <div class="testimonial-wrap mx-auto">
                                 <div class="testimon-detail">
                                     <div class="testimon-icon"><i class="ion ion-quote"></i></div>
-                                    <strong>Great Plugin</strong>
-                                    <p>Switching to WordPress from Joomla was greatly helped by a great download manager for WordPress, WPDM. With unsurpassed support I was able to fine tune my downloads section on the website to my delight. </p>
+                                    <strong>信息安全</strong>
+                                    <p>加密算法，使得你的个人信息更加安全</p>
                                 </div>
                                 <div class="testimon-img-wrap">
                                     <div class="testimon-img"><img src="static/assets/images/team_2.jpg" alt="Profile Image"></div>
-                                    <div class="testimon-name">Rob Vens</div>
-                                    <div class="testimon-tag">Reflektis.com</div>
+                                    <div class="testimon-name">Select</div>
+                                    <div class="testimon-tag">Select.com</div>
                                 </div>
                             </div>
                         </div>
@@ -179,8 +143,8 @@
                             <div class="testimonial-wrap mx-auto">
                                 <div class="testimon-detail">
                                     <div class="testimon-icon"><i class="ion ion-quote"></i></div>
-                                    <strong>Great Plugin</strong>
-                                    <p>Switching to WordPress from Joomla was greatly helped by a great download manager for WordPress, WPDM. With unsurpassed support I was able to fine tune my downloads section on the website to my delight. </p>
+                                    <strong>既时创建</strong>
+                                    <p>可以随时创建想要使用的集体和任务，方便作业的收集上传</p>
                                 </div>
                                 <div class="testimon-img-wrap">
                                     <div class="testimon-img"><img src="static/assets/images/team_1.jpg" alt="Profile Image"></div>
@@ -191,105 +155,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!--=== products intro ===-->
-    <section id="blog" class="product">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-title-wrap text-center">
-                        <div class="section-tag">See All </div>
-                        <div class="section-title"><h2>Our News Update</h2></div>
-                        <div class="section-detail-para">Want to give a new look to your site or still need more feature? WordPress Download Manager Plugin has lots of amazing themes, add-ons and there are further more coming continuously...</div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="card">
-                            <div class="product__item-img">
-                                <img class="card-img-top img-fluid product-face" src="static/assets/images/thumb/blog-thumb_01.jpg" alt="Product Thumb">
-                                <div class="product__item-overlay">
-                                    <ul class="list-inline product-info">
-                                        <li class="list-inline-item"><a href="single-post.html"><i class="ion ion-ios-search"></i></a> </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product__content-inner card-body">
-                                <div class="product__title-price">
-                                    <a href="product-detail.html"><h5 class="card-title">The Best Productivity Apps on Market</h5></a>
-                                </div>
-                                <div class="product-para">You can use multiple file with single entry at front-end.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="card">
-                            <div class="product__item-img">
-                                <img class="card-img-top img-fluid product-face" src="static/assets/images/thumb/blog-thumb_01.jpg" alt="Product Thumb">
-                                <div class="product__item-overlay">
-                                    <ul class="list-inline product-info">
-                                        <li class="list-inline-item"><a href="single-post.html"><i class="ion ion-ios-search"></i></a> </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product__content-inner card-body">
-                                <div class="product__title-price">
-                                    <a href="product-detail.html"><h5 class="card-title">The Best Productivity Apps on Market</h5></a>
-                                </div>
-                                <div class="product-para">You can use multiple file with single entry at front-end.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="card">
-                            <div class="product__item-img">
-                                <img class="card-img-top img-fluid product-face" src="static/assets/images/thumb/blog-thumb_01.jpg" alt="Product Thumb">
-                                <div class="product__item-overlay">
-                                    <ul class="list-inline product-info">
-                                        <li class="list-inline-item"><a href="single-post.html"><i class="ion ion-ios-search"></i></a> </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product__content-inner card-body">
-                                <div class="product__title-price">
-                                    <a href="product-detail.html"><h5 class="card-title">The Best Productivity Apps on Market</h5></a>
-                                </div>
-                                <div class="product-para">You can use multiple file with single entry at front-end.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="card">
-                            <div class="product__item-img">
-                                <img class="card-img-top img-fluid product-face" src="static/assets/images/thumb/blog-thumb_01.jpg" alt="Product Thumb">
-                                <div class="product__item-overlay">
-                                    <ul class="list-inline product-info">
-                                        <li class="list-inline-item"><a href="single-post.html"><i class="ion ion-ios-search"></i></a> </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product__content-inner card-body">
-                                <div class="product__title-price">
-                                    <a href="product-detail.html"><h5 class="card-title">The Best Productivity Apps on Market</h5></a>
-                                </div>
-                                <div class="product-para">You can use multiple file with single entry at front-end.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 mt-5">
-                    <div class="text-center"><a href="blogpage.html" class="btn btn-primary main-btn btn-reload"><i class="fa fa-spinner fa-spin"></i> View More</a></div>
-                </div>
-
             </div>
         </div>
     </section>

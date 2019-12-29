@@ -30,7 +30,7 @@
         FROM
         user AS dt
         WHERE
-        uid = #{uid}
+        uid = #{id}
     </select>
 
     <update id="update">

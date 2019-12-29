@@ -1,5 +1,6 @@
 package com.windsoft.lt.grade.domain;
 
+import com.windsoft.lt.grade.commons.persistence.BaseEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -15,7 +16,7 @@ import java.util.Date;
  **/
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class Assignment  implements Serializable {
+public class Assignment extends BaseEntity implements Serializable {
     private Long assId ;
     private String name;
     private String content;

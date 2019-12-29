@@ -1,19 +1,16 @@
 package com.windsoft.lt.grade.web.ui.controller;
 
+import com.windsoft.lt.grade.commons.constant.ConstantUtils;
 import com.windsoft.lt.grade.commons.dto.BaseResult;
-import com.windsoft.lt.grade.web.ui.api.AssignmentAPI;
-import com.windsoft.lt.grade.web.ui.api.OrganizationAPI;
-import com.windsoft.lt.grade.web.ui.api.ResourceAPI;
-import com.windsoft.lt.grade.web.ui.dto.Assignment;
+import com.windsoft.lt.grade.web.ui.api.*;
+import com.windsoft.lt.grade.web.ui.dto.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import javax.servlet.http.HttpServletRequest;
+import java.util.*;
 
 /**
  * @ClassName OrganizationController
@@ -27,7 +24,7 @@ import java.util.Map;
 public class OrganizationController {
 
     @RequestMapping(value = "", method = RequestMethod.GET)
-    public String organization(Long id, Model model) throws Exception {
+    public String organization(Long id, Model model, HttpServletRequest request) throws Exception {
         BaseResult resultRes = ResourceAPI.getAll(id);
         BaseResult resultMember = OrganizationAPI.getMember(id);
         BaseResult resultAss = AssignmentAPI.getAll(id);
@@ -52,11 +49,55 @@ public class OrganizationController {
         model.addAttribute("member",resultMember.getData());
         model.addAttribute("assignment",assCatalog);
 
+        request.getSession().setAttribute(ConstantUtils.SESSION_ORG_ID, id);
+
         return "organization";
     }
 
     @RequestMapping(value = "form", method = RequestMethod.GET)
     public String created(){
         return "organization_form";
+    }
+
+    @RequestMapping(value = "send", method = RequestMethod.POST)
+    public void send(String document, HttpServletRequest request) throws Exception {
+        Long id = (Long) request.getSession().getAttribute(ConstantUtils.SESSION_ORG_ID);
+        User user = (User) request.getSession().getAttribute(ConstantUtils.SESSION_USER);
+
+        Forum forum = new Forum();
+        forum.setOrgId(id);
+        forum.setUid(user.getUid());
+
+        forum.setDocument(document);
+
+        BaseResult result = BaseResult.fail();
+        result = ForumAPI.sendMessage(forum);
+
+    }
+
+    @RequestMapping(value = "task", method = RequestMethod.GET)
+    public String taskForm(){
+        return "assignment_form";
+    }
+
+    @RequestMapping(value = "task/create", method = RequestMethod.POST)
+    public String createTask(Assignment assignment, Resource resource, HttpServletRequest request){
+        Long id = (Long) request.getSession().getAttribute(ConstantUtils.SESSION_ORG_ID);
+        return "";
+    }
+
+
+    @RequestMapping(value = "created", method = RequestMethod.POST)
+    public String createOrganization(Organization organization, HttpServletRequest request) throws Exception {
+        User user = (User) request.getSession().getAttribute(ConstantUtils.SESSION_USER);
+        organization.setOrgType(0);
+        organization.setCreated(new Date());
+        organization.setUid(user.getUid());
+
+        BaseResult result = OrganizationAPI.created(organization);
+
+        if(result.getStatus() == BaseResult.STATUS_SUCCESS)
+            return "redirect:/main";
+        return "#";
     }
 }

@@ -77,4 +77,10 @@ public class LoginController {
             return "redirect:/main";
         }
     }
+
+
+    @RequestMapping(value = "forget", method = RequestMethod.GET)
+    public String forget(){
+        return "forgot_password";
+    }
 }

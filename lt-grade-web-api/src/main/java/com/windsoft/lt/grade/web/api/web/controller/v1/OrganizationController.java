@@ -1,7 +1,10 @@
 package com.windsoft.lt.grade.web.api.web.controller.v1;
 
 import com.windsoft.lt.grade.commons.dto.BaseResult;
+import com.windsoft.lt.grade.commons.utils.MapperUtils;
 import com.windsoft.lt.grade.domain.LinkOrgUser;
+import com.windsoft.lt.grade.domain.Organization;
+import com.windsoft.lt.grade.domain.User;
 import com.windsoft.lt.grade.web.api.service.OrgUserLinkService;
 import com.windsoft.lt.grade.web.api.web.dto.MemberDTO;
 import com.windsoft.lt.grade.web.api.web.dto.OrganizationDTO;
@@ -38,8 +41,9 @@ public class OrganizationController {
         return result;
     }
 
-    @RequestMapping(value = "search", method = RequestMethod.GET)
-    public BaseResult search(String keyword){
+    @RequestMapping(value = "search/{keyword}", method = RequestMethod.GET)
+    public BaseResult search(@PathVariable(value = "keyword")
+                                         String keyword){
         BaseResult result = linkService.getKeyWordList(keyword);
 
         transform(result);
@@ -68,6 +72,19 @@ public class OrganizationController {
         }
         return BaseResult.fail("请求失败");
     }
+    @RequestMapping(value = "created", method = RequestMethod.POST)
+    private BaseResult created(String json) throws Exception {
+        OrganizationDTO organizationDTO = MapperUtils.json2pojo(json, OrganizationDTO.class);
+        LinkOrgUser linkOrgUser = new LinkOrgUser();
+        linkOrgUser.setUser(new User());
+        linkOrgUser.setOrganization(new Organization());
+        BeanUtils.copyProperties(organizationDTO,linkOrgUser);
+        BeanUtils.copyProperties(organizationDTO,linkOrgUser.getUser());
+        BeanUtils.copyProperties(organizationDTO,linkOrgUser.getOrganization());
+        BaseResult result = linkService.create(linkOrgUser);
+
+        return result;
+    }
 
     private void transform(BaseResult result){
         List<OrganizationDTO> organizationDTOS = new ArrayList<OrganizationDTO>();
@@ -85,6 +102,4 @@ public class OrganizationController {
             result.setData(organizationDTOS);
         }
     }
-
-
 }

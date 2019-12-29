@@ -30,4 +30,13 @@ public class MainController {
 
         return "main";
     }
+
+    @RequestMapping(value = "test",method = RequestMethod.GET)
+    public String search(Model model, String keyword) throws Exception {
+        BaseResult result = OrganizationAPI.search(keyword);
+
+        model.addAttribute("organizations", result.getData());
+
+        return "redirect:/main";
+    }
 }

@@ -6,6 +6,7 @@
 <head>
     <title>风叶 - 团体界面</title>
     <jsp:include page="../includes/header.jsp"/>
+    <link rel="stylesheet" href="/static/assets/css/timeline.css">
 </head>
 <body>
 
@@ -15,8 +16,8 @@
         <section class="page-header d-flex align-items-center">
             <div class="container-fluid">
                 <div class="page-header-content text-center">
-                    <div class="page-header-tag">Post Detail</div>
-                    <div class="page-header-title">Read Single Post</div>
+                    <div class="page-header-tag">17软工1</div>
+                    <div class="page-header-title">开始班级管理之旅吧</div>
                 </div>
             </div>
         </section>
@@ -39,7 +40,7 @@
                     <div class="col-lg-2 col-md-3 col-sm-4">
                         <div class="speciality-wrap">
                             <div><i class="ion ion-ios-browsers-outline"></i></div>
-                            <a href="#">创建任务</a>
+                            <a href="/organization/task">创建任务</a>
                         </div>
                     </div>
                 </div>
@@ -71,8 +72,30 @@
                             <div class="tab-content" id="myTabContent">
                                 <!--one-->
                                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                    <a href="#" class="post-image" ><img src="/static/assets/images/thumb/blog-item_01.jpg" alt="#" class="img-fluid featured-img"></a>
+                                    <div class="row">
+                                        <h2>资源列表</h2>
+                                        <div class="timeline timeline-single-column">
+                                            <div class="timeline-item">
+                                                <div class="timeline-point timeline-point-blank">
+                                                </div>
+                                                <div class="timeline-event">
+                                                    <div class="timeline-heading">
+                                                        <h4>实验报告模板</h4>
+                                                    </div>
+                                                    <div class="timeline-body">
+                                                        <p>上交实验模板使用</p>
+                                                    </div>
+                                                    <div class="timeline-footer primary">
+                                                        <p class="text-right">2019.12.24</p>
+                                                    </div>
+                                                </div>
+                                            </div>
 
+                                            <span class="timeline-label">
+					<button class="btn btn-danger"><i class="fa fa-ambulance"></i></button>
+				</span>
+                                        </div>
+                                    </div>
                                 </div>
                                 <!--two-->
                                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
@@ -176,63 +199,40 @@
                                                         <div class="media single-content">
                                                             <a href="#"><img class=" img-responsive" src="/static/assets/images/team_1.jpg" alt="image"></a>
                                                             <div class="media-body">
-                                                                <h3 class="">Jhon Doe | <span>Oct 03, 2016</span></h3>
+                                                                <h3 class="">Ricost | <span>2019.12.24</span></h3>
                                                                 <p>
-                                                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-
+                                                                    宝塔Linux面板是提升运维效率的服务器管理软件，支持一键LAMP/LNMP/集群/监控/网站/FTP/数据库/JAVA等100多项服务器管理功能。
                                                                 </p>
                                                                 <div class="media single-content">
                                                                     <a href="#"><img class=" img-responsive" src="/static/assets/images/team_2.jpg" alt="image"></a>
                                                                     <div class="media-body">
-                                                                        <h3 class="">Jhon Doe | <span>Oct 03, 2016</span></h3>
+                                                                        <h3 class="">风驭羿 | <span>2019.12.24</span></h3>
                                                                         <p>
-                                                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-
+                                                                            有20个人的专业团队研发及维护，经过200多个版本的迭代，功能全，少出错且足够安全，已获得全球百万用户认可安装。运维要高效，装宝塔。
                                                                         </p>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="media single-content">
-                                                            <a href="#"><img class=" img-responsive" src="/static/assets/images/team_3.jpg" alt="image"></a>
-                                                            <div class="media-body">
-                                                                <h3 class="">Jhon Doe | <span>Oct 03, 2016</span></h3>
-                                                                <p>
-                                                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-                                                                </p>
-                                                            </div>
-                                                        </div>
                                                     </div>
                                                 </div>
 
-                                                <div class="row">
+                                                <form class="row" method="post" action="/organization/send">
                                                     <div class="col-12">
-                                                        <div class="border-wrapper"><h2 class="comment-section-title">Reply a Comment</h2></div>
+                                                        <div class="border-wrapper"><h2 class="comment-section-title">发表留言</h2></div>
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form-group">
-                                                            <label class="sr-only">Your Name</label>
-                                                            <input name="name" class="form-control" placeholder="First Name" type="text">
+                                                            <label class="sr-only">内容</label>
+                                                            <textarea class="form-control textarea" name="document" rows="5" placeholder="内容"></textarea>
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form-group">
-                                                            <label class="sr-only">Your Email</label>
-                                                            <input name="email" class="form-control" placeholder="Your Email" type="email">
+                                                            <button type="submit" class="btn btn-secondary">发送</button>
                                                         </div>
                                                     </div>
-                                                    <div class="col-12">
-                                                        <div class="form-group">
-                                                            <label class="sr-only">Massage</label>
-                                                            <textarea class="form-control textarea" name="message" rows="5" placeholder="Massage"></textarea>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="form-group">
-                                                            <button type="submit" class="btn btn-secondary">Leave a post</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                </form>
 
                                             </div>
                                         </div>
@@ -244,9 +244,9 @@
 
 
                             <ul class="list-inline share-icon text-left">
-                                <li class="list-inline-item"><span>Theme</span></li>
-                                <li class="list-inline-item"><span>Blog</span></li>
-                                <li class="list-inline-item"><span>Wordpress</span></li>
+                                <li class="list-inline-item"><span>团队</span></li>
+                                <li class="list-inline-item"><span>任务</span></li>
+                                <li class="list-inline-item"><span>博客</span></li>
                             </ul>
                         </div>
 

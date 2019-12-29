@@ -34,7 +34,7 @@
         <div class="col-lg-8">
             <div class="login">
 
-                <h1>Login</h1>
+                <h1>登 录</h1>
 
                 <!-- Loging form -->
                 <form action="/login" method="post">
@@ -52,19 +52,19 @@
                             <input type="checkbox" name="isRemember" ${isRemember == true ? "checked" : ""}>
                             <span class="slider round"></span>
                         </label>
-                        <label class="form-check-label">Remember me</label>
-
-                        <label class="forgot-password"><a href="#">Forgot Password?</a></label>
+                        <p class="">记住我</p>
+                        <br>
+                        <label class="forgot-password"><a href="/forget">忘记密码</a></label>
 
                     </div>
 
                     <br>
-                    <button type="submit" class="btn btn-lg btn-block btn-success">Sign in</button>
+                    <button type="submit" class="btn btn-lg btn-block btn-success">登录</button>
                 </form>
                 <!-- End Loging form -->
                 <hr>
                 <div class="text-center">
-                    <a class="small" href="#">没有账号？注册</a>
+                    <a class="small" href="/register">没有账号？注册</a>
                 </div>
             </div>More Templates
         </div>

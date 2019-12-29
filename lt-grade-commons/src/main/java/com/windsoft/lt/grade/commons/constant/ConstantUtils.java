@@ -7,4 +7,5 @@ package com.windsoft.lt.grade.commons.constant;
  */
 public class ConstantUtils {
     public static final String SESSION_USER = "user";
+    public static final String SESSION_ORG_ID = "orgId";
 }

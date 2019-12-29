@@ -28,26 +28,26 @@
         <div class="col-lg-8">
             <div class="login">
 
-                <h1>Forgot - Password</h1>
+                <h1>忘记密码</h1>
 
                 <!-- Loging form -->
                 <form>
                     <div class="form-group">
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="输入邮箱">
                     </div>
 
                     <br>
                     <br>
-                    <button type="submit" class="btn btn-lg btn-block btn-success">Send message</button>
+                    <button type="submit" class="btn btn-lg btn-block btn-success">验证信息</button>
                 </form>
                 <!-- End Loging form -->
 
                 <hr>
                 <div class="text-center">
-                    <a class="small" href="#">Already have an account? Login!</a>
+                    <a class="small" href="/login">以及拥有帐号？立即登录</a>
                 </div>
                 <div class="text-center">
-                    <a class="small" href="#">Already have an account? Login!</a>
+                    <a class="small" href="/register">没有账号？注册一个</a>
                 </div>
 
             </div>More Templates

@@ -19,6 +19,6 @@ public class Organization {
     private Long orgId;
     private String orgName;
     private int orgType;
-    private String intor;
+    private String intro;
     private Date created;
 }

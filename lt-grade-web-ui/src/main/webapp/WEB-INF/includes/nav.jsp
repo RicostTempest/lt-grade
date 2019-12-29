@@ -11,21 +11,12 @@
             </button>
             <div class="collapse navbar-collapse" id="v">
                 <ul class="nav navbar-nav mr-auto">
-                    <li class="nav-item active"><a class="nav-link scroll" href="#nav">Home</a></li>
-                    <li class="nav-item"><a class="nav-link scroll" href="#feature">Feature</a></li>
-                    <li class="nav-item"><a class="nav-link scroll" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link scroll" href="#testimonial">Testimonial</a></li>
-                    <li class="nav-item"><a class="nav-link scroll" href="#blog">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link scroll" href="contact.html">Contact</a></li>
-                    <li class="dropdown nav-item"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">pages</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="blogpage.html"><i class="ion ion-chevron-right"></i>Blog Home page</a></li>
-                            <li><a class="dropdown-item" href="single-post.html"><i class="ion ion-chevron-right"></i>single Post Page</a></li>
-                            <li><a class="dropdown-item" href="contact.html"><i class="ion ion-chevron-right"></i>Our Contact</a></li>
-                            <li><a class="dropdown-item" href="blogpage.html"><i class="ion ion-chevron-right"></i>Blog Home page</a></li>
-                            <li><a class="dropdown-item" href="single-post.html"><i class="ion ion-chevron-right"></i>single Post Page</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav-item active"><a class="nav-link scroll" href="#nav">主页</a></li>
+                    <li class="nav-item"><a class="nav-link scroll" href="#feature">景观</a></li>
+                    <li class="nav-item"><a class="nav-link scroll" href="#about">相关</a></li>
+                    <li class="nav-item"><a class="nav-link scroll" href="#testimonial">条件</a></li>
+                    <li class="nav-item"><a class="nav-link scroll" href="#blog">简介</a></li>
+                    <li class="nav-item"><a class="nav-link scroll" href="contact.html">内容</a></li>
                 </ul>
                 <ul class="nav navbar-nav ml-auto">
                     <li class="dropdown nav-item"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="ion ion-ios-search-strong"></i></a>

@@ -1,6 +1,7 @@
 package com.windsoft.lt.grade.web.api.service;
 
 import com.windsoft.lt.grade.commons.dto.BaseResult;
+import com.windsoft.lt.grade.domain.LinkOrgUser;
 import com.windsoft.lt.grade.domain.User;
 
 /**
@@ -16,4 +17,5 @@ public interface OrgUserLinkService {
     BaseResult getOrgList(Long uid);
     BaseResult getKeyWordList(String keyword);
     BaseResult getMember(Long id);
+    BaseResult create(LinkOrgUser orgUser);
 }
